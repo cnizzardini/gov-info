@@ -29,6 +29,7 @@ class Collection
     }
     
     /**
+     * Returns a type of collection
      * 
      * @param string $type
      * @param \Cnizzardini\GovInfo\Requestor\Collection $objRequestor
