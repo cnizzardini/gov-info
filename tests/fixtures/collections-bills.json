@@ -1,0 +1,708 @@
+{
+    "count": 202767,
+    "message": null,
+    "nextPage": "https://api.govinfo.gov/collections/BILLS/2018-01-01T00:00:00Z/?offset=100&pageSize=100",
+    "previousPage": null,
+    "packages": [
+        {
+            "packageId": "BILLS-115hr2740rfs",
+            "lastModified": "2018-11-16T00:33:17Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr2740rfs/summary",
+            "docClass": "hr",
+            "title": "Rabbi Michoel Ber Weissmandl Congressional Gold Medal Act of 2017"
+        },
+        {
+            "packageId": "BILLS-115hr2630rs",
+            "lastModified": "2018-11-16T00:33:15Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr2630rs/summary",
+            "docClass": "hr",
+            "title": "La Paz County Land Conveyance Act"
+        },
+        {
+            "packageId": "BILLS-115hr4033rfs",
+            "lastModified": "2018-11-16T00:33:00Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr4033rfs/summary",
+            "docClass": "hr",
+            "title": "National Geologic Mapping Act Reauthorization Act"
+        },
+        {
+            "packageId": "BILLS-115hr4446rs",
+            "lastModified": "2018-11-16T00:32:49Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr4446rs/summary",
+            "docClass": "hr",
+            "title": "An Act To amend the Virgin Islands of the United States Centennial Commission Act to extend the expiration date of the Commission, and for other purposes."
+        },
+        {
+            "packageId": "BILLS-115hr5636rfs",
+            "lastModified": "2018-11-16T00:32:45Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr5636rfs/summary",
+            "docClass": "hr",
+            "title": "Flatside Wilderness Enhancement Act"
+        },
+        {
+            "packageId": "BILLS-115hr5317rs",
+            "lastModified": "2018-11-16T00:32:34Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr5317rs/summary",
+            "docClass": "hr",
+            "title": "An Act To repeal section 2141 of the Revised Statutes to remove the prohibition on certain alcohol manufacturing on Indian lands."
+        },
+        {
+            "packageId": "BILLS-115hr6666eh",
+            "lastModified": "2018-11-16T00:32:09Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6666eh/summary",
+            "docClass": "hr",
+            "title": "An Act To authorize the Secretary of the Interior to grant to States and local governments easements and rights-of-way over Federal land within Gateway National Recreation Area for construction, operation, and maintenance of projects for control and prevention of flooding and shoreline erosion."
+        },
+        {
+            "packageId": "BILLS-115hr5706rfs",
+            "lastModified": "2018-11-16T00:32:04Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr5706rfs/summary",
+            "docClass": "hr",
+            "title": "World War II Pacific Sites Establishment Act"
+        },
+        {
+            "packageId": "BILLS-115hres1142eh",
+            "lastModified": "2018-11-16T00:31:43Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1142eh/summary",
+            "docClass": "hres",
+            "title": "Providing for consideration of the bill (H.R. 6784) to provide for removal of the gray wolf in the contiguous 48 States from the List of Endangered and Threatened Wildlife published under the Endangered Species Act of 1973, and providing for proceedings during the period from November 19, 2018, through November 26, 2018."
+        },
+        {
+            "packageId": "BILLS-115hr6040rs",
+            "lastModified": "2018-11-16T00:31:38Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6040rs/summary",
+            "docClass": "hr",
+            "title": "Contra Costa Canal Transfer Act"
+        },
+        {
+            "packageId": "BILLS-115hr6018rfs",
+            "lastModified": "2018-11-16T00:31:35Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6018rfs/summary",
+            "docClass": "hr",
+            "title": "Trans-Sahara Counterterrorism Partnership Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115s1012rs",
+            "lastModified": "2018-11-16T00:31:24Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s1012rs/summary",
+            "docClass": "s",
+            "title": "New Mexico Drought Preparedness Act of 2017; New Mexico Drought Preparedness Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr6146rfs",
+            "lastModified": "2018-11-16T00:31:19Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6146rfs/summary",
+            "docClass": "hr",
+            "title": "Cottonwood Land Exchange Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115s884rs",
+            "lastModified": "2018-11-16T00:31:12Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s884rs/summary",
+            "docClass": "s",
+            "title": "To amend the Omnibus Budget Reconciliation Act of 1993 to require the Bureau of Land Management to provide a claimant of a small miner waiver from claim maintenance fees with a period of 60 days after written receipt of 1 or more defects is provided to the claimant by registered mail to cure the 1 or more defects or pay the claim maintenance fee, and for other purposes."
+        },
+        {
+            "packageId": "BILLS-115s3001rs",
+            "lastModified": "2018-11-16T00:31:02Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s3001rs/summary",
+            "docClass": "s",
+            "title": "Contra Costa Canal Transfer Act"
+        },
+        {
+            "packageId": "BILLS-115sres687is",
+            "lastModified": "2018-11-16T00:30:59Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115sres687is/summary",
+            "docClass": "sres",
+            "title": "Congratulating the Boston Red Sox on winning the 2018 World Series."
+        },
+        {
+            "packageId": "BILLS-115hr2156rs",
+            "lastModified": "2018-11-16T00:30:54Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr2156rs/summary",
+            "docClass": "hr",
+            "title": "Saint Francis Dam Disaster National Memorial Act"
+        },
+        {
+            "packageId": "BILLS-115s2941rs",
+            "lastModified": "2018-11-16T00:30:53Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s2941rs/summary",
+            "docClass": "s",
+            "title": "Strengthening the Cooperative Observer Program Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr6064rfs",
+            "lastModified": "2018-11-16T00:30:48Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6064rfs/summary",
+            "docClass": "hr",
+            "title": "An Act To rename the Oyster Bay National Wildlife Refuge as the Congressman Lester Wolff National Wildlife Refuge."
+        },
+        {
+            "packageId": "BILLS-115s2861rs",
+            "lastModified": "2018-11-16T00:30:48Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s2861rs/summary",
+            "docClass": "s",
+            "title": "Passenger Rail Crew Protection Parity Act; Passenger Rail Crew Protection Act"
+        },
+        {
+            "packageId": "BILLS-109s1783es",
+            "lastModified": "2018-11-15T18:34:31Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-109s1783es/summary",
+            "docClass": "s",
+            "title": "Pension Security and Transparency Act of 2005"
+        },
+        {
+            "packageId": "BILLS-115hr7131ih",
+            "lastModified": "2018-11-15T09:08:30Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7131ih/summary",
+            "docClass": "hr",
+            "title": "Preserving Home and Office Numbers in Emergencies Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr7129ih",
+            "lastModified": "2018-11-15T09:08:25Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7129ih/summary",
+            "docClass": "hr",
+            "title": "To require the Secretary of Veterans Affairs to provide training in the use of medical cannabis for all Department of Veterans Affairs primary care providers, and for other purposes."
+        },
+        {
+            "packageId": "BILLS-115hr7126ih",
+            "lastModified": "2018-11-15T09:08:20Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7126ih/summary",
+            "docClass": "hr",
+            "title": "To exempt certain structures from removal from Army Corps of Engineers property on Table Rock Lake, and for other purposes."
+        },
+        {
+            "packageId": "BILLS-115hr7130ih",
+            "lastModified": "2018-11-15T09:08:15Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7130ih/summary",
+            "docClass": "hr",
+            "title": "Department of Veterans Affairs Policy for Medicinal Cannabis Use Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr7132ih",
+            "lastModified": "2018-11-15T09:08:08Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7132ih/summary",
+            "docClass": "hr",
+            "title": "Strengthening America's Public Schools Through Promoting Foreign Investment Act"
+        },
+        {
+            "packageId": "BILLS-115hr7125ih",
+            "lastModified": "2018-11-15T09:08:05Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7125ih/summary",
+            "docClass": "hr",
+            "title": "To rename the portions of the Gateway National Seashore located on Staten Island, New York, as the Senator James L. Buckley National Seashore."
+        },
+        {
+            "packageId": "BILLS-115hr7128ih",
+            "lastModified": "2018-11-15T09:08:04Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7128ih/summary",
+            "docClass": "hr",
+            "title": "VA Survey of Cannabis Use Act"
+        },
+        {
+            "packageId": "BILLS-115hr7133ih",
+            "lastModified": "2018-11-15T09:08:04Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7133ih/summary",
+            "docClass": "hr",
+            "title": "Captive Insurers Clarification Act"
+        },
+        {
+            "packageId": "BILLS-115hres1147ih",
+            "lastModified": "2018-11-15T05:45:18Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1147ih/summary",
+            "docClass": "hres",
+            "title": "Congratulating Dr. Denis Mukwege and Nadia Murad for receiving the 2018 Nobel Peace Prize for their advocacy on behalf of the millions who have suffered from sexual violence as a result of conflict, and for other purposes."
+        },
+        {
+            "packageId": "BILLS-115hr2069rh",
+            "lastModified": "2018-11-15T05:45:13Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr2069rh/summary",
+            "docClass": "hr",
+            "title": "Fostering Stable Housing Opportunities Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr2683rh",
+            "lastModified": "2018-11-15T05:45:03Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr2683rh/summary",
+            "docClass": "hr",
+            "title": "Protecting Veterans Credit Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr7134ih",
+            "lastModified": "2018-11-15T05:45:03Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7134ih/summary",
+            "docClass": "hr",
+            "title": "For the relief of Gualterio Lazaro Santos Santos."
+        },
+        {
+            "packageId": "BILLS-115hr2570rh",
+            "lastModified": "2018-11-15T05:44:59Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr2570rh/summary",
+            "docClass": "hr",
+            "title": "Mortgage Fairness Act of 2017"
+        },
+        {
+            "packageId": "BILLS-115hres1146ih",
+            "lastModified": "2018-11-15T05:44:59Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1146ih/summary",
+            "docClass": "hres",
+            "title": "Expressing support for designation of the week beginning on November 12, 2018, as National School Psychology Week."
+        },
+        {
+            "packageId": "BILLS-115hr7135ih",
+            "lastModified": "2018-11-15T05:44:59Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7135ih/summary",
+            "docClass": "hr",
+            "title": "To direct the Secretary of the department in which the Coast Guard is operating to issue a certificate of documentation with a coastwise endorsement for the vessel Pacific Provider."
+        },
+        {
+            "packageId": "BILLS-115hr2740eh",
+            "lastModified": "2018-11-15T01:06:55Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr2740eh/summary",
+            "docClass": "hr",
+            "title": "Rabbi Michoel Ber Weissmandl Congressional Gold Medal Act of 2017"
+        },
+        {
+            "packageId": "BILLS-115hr2615enr",
+            "lastModified": "2018-11-15T01:06:49Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr2615enr/summary",
+            "docClass": "hr",
+            "title": "Gulf Islands National Seashore Land Exchange Act"
+        },
+        {
+            "packageId": "BILLS-115hr3359enr",
+            "lastModified": "2018-11-15T01:06:44Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr3359enr/summary",
+            "docClass": "hr",
+            "title": "Cybersecurity and Infrastructure Security Agency Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr4033eh",
+            "lastModified": "2018-11-15T01:06:29Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr4033eh/summary",
+            "docClass": "hr",
+            "title": "National Geologic Mapping Act Reauthorization Act"
+        },
+        {
+            "packageId": "BILLS-115hr5706eh",
+            "lastModified": "2018-11-15T01:06:24Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr5706eh/summary",
+            "docClass": "hr",
+            "title": "World War II Pacific Sites Establishment Act"
+        },
+        {
+            "packageId": "BILLS-115hr5636eh",
+            "lastModified": "2018-11-15T01:06:08Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr5636eh/summary",
+            "docClass": "hr",
+            "title": "Flatside Wilderness Enhancement Act"
+        },
+        {
+            "packageId": "BILLS-115s2074eah",
+            "lastModified": "2018-11-15T01:06:08Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s2074eah/summary",
+            "docClass": "s",
+            "title": "An Act to establish a procedure for the conveyance of certain Federal property around the Jamestown Reservoir in the State of North Dakota, and for other purposes."
+        },
+        {
+            "packageId": "BILLS-115s440eah",
+            "lastModified": "2018-11-15T01:06:03Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s440eah/summary",
+            "docClass": "s",
+            "title": "An Act to establish a procedure for the conveyance of certain Federal property around the Dickinson Reservoir in the State of North Dakota."
+        },
+        {
+            "packageId": "BILLS-115hr6018eh",
+            "lastModified": "2018-11-15T01:05:33Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6018eh/summary",
+            "docClass": "hr",
+            "title": "Trans-Sahara Counterterrorism Partnership Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr6064eh",
+            "lastModified": "2018-11-15T01:05:28Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6064eh/summary",
+            "docClass": "hr",
+            "title": "An Act To rename the Oyster Bay National Wildlife Refuge as the Congressman Lester Wolff National Wildlife Refuge."
+        },
+        {
+            "packageId": "BILLS-115hr6146eh",
+            "lastModified": "2018-11-15T01:05:13Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6146eh/summary",
+            "docClass": "hr",
+            "title": "Cottonwood Land Exchange Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr6651eh",
+            "lastModified": "2018-11-15T01:05:03Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6651eh/summary",
+            "docClass": "hr",
+            "title": "PEPFAR Extension Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hres1055eh",
+            "lastModified": "2018-11-15T01:04:38Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1055eh/summary",
+            "docClass": "hres",
+            "title": "To affirm strong United States-Liberia ties and support for democratic principles, and call for full implementation of the Truth and Reconciliation Commission recommendations, including the establishment of an Extraordinary Criminal Tribunal for Liberia."
+        },
+        {
+            "packageId": "BILLS-115hres1138eh",
+            "lastModified": "2018-11-15T01:04:28Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1138eh/summary",
+            "docClass": "hres",
+            "title": "Condemning the anti-Semitic attack on the building housing three congregations, Tree of Life, Dor Hadash, and New Light, honoring the memory of the victims of the attack, and offering condolences to and expressing support for their families, friends, and community."
+        },
+        {
+            "packageId": "BILLS-115hres1052eh",
+            "lastModified": "2018-11-15T01:04:28Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1052eh/summary",
+            "docClass": "hres",
+            "title": "Affirming United States-Australia cooperation on space research, exploration, and utilization."
+        },
+        {
+            "packageId": "BILLS-115s2242rs",
+            "lastModified": "2018-11-15T00:18:15Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s2242rs/summary",
+            "docClass": "s",
+            "title": "COASTAL Implementation Act of 2017; COASTAL Implementation Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr5079rs",
+            "lastModified": "2018-11-15T00:18:05Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr5079rs/summary",
+            "docClass": "hr",
+            "title": "DHS Field Engagement Accountability Act"
+        },
+        {
+            "packageId": "BILLS-115s3047rs",
+            "lastModified": "2018-11-15T00:17:44Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s3047rs/summary",
+            "docClass": "s",
+            "title": "Opportunities to Provide for Illicit Opioid Interdiction and Detection Act of 2018; OPIOID Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115s3484rs",
+            "lastModified": "2018-11-15T00:17:28Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s3484rs/summary",
+            "docClass": "s",
+            "title": "Grant Reporting Efficiency and Agreements Transparency Act of 2018; GREAT Act"
+        },
+        {
+            "packageId": "BILLS-115s3265rs",
+            "lastModified": "2018-11-15T00:17:12Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s3265rs/summary",
+            "docClass": "s",
+            "title": "Waterfront Community Revitalization and Resiliency Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115s3612is",
+            "lastModified": "2018-11-15T00:17:02Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s3612is/summary",
+            "docClass": "s",
+            "title": "Fair Housing Improvement Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115s3611is",
+            "lastModified": "2018-11-15T00:16:56Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s3611is/summary",
+            "docClass": "s",
+            "title": "Faster Access to Federal Student Aid Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115s3610is",
+            "lastModified": "2018-11-15T00:16:15Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s3610is/summary",
+            "docClass": "s",
+            "title": "Medicare Patient Empowerment Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115sconres50is",
+            "lastModified": "2018-11-15T00:15:54Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115sconres50is/summary",
+            "docClass": "sconres",
+            "title": "Recognizing the rich history, heritage, and strategic importance of the Republic of the Marshall Islands and the Marshallese population residing in the United States."
+        },
+        {
+            "packageId": "BILLS-115s3613is",
+            "lastModified": "2018-11-15T00:15:28Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115s3613is/summary",
+            "docClass": "s",
+            "title": "Mancos Water Conservancy District Conveyance Act"
+        },
+        {
+            "packageId": "BILLS-115sres686is",
+            "lastModified": "2018-11-15T00:15:27Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115sres686is/summary",
+            "docClass": "sres",
+            "title": "Honoring the life, accomplishments, and legacy of Lodi Gyaltsen Gyari."
+        },
+        {
+            "packageId": "BILLS-115hr7122ih",
+            "lastModified": "2018-11-14T09:10:40Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7122ih/summary",
+            "docClass": "hr",
+            "title": "Shared Accountability for Improved Patient Outcomes Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hres1143ih",
+            "lastModified": "2018-11-14T09:10:34Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1143ih/summary",
+            "docClass": "hres",
+            "title": "Calling on the President to resume the interpretation of section 1 of the 14th Amendment to the Constitution as originally intended and applied as law for a century."
+        },
+        {
+            "packageId": "BILLS-115hr7121ih",
+            "lastModified": "2018-11-14T09:10:30Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7121ih/summary",
+            "docClass": "hr",
+            "title": "Commission of Fine Arts District of Columbia Home Rule Act"
+        },
+        {
+            "packageId": "BILLS-115hr7120ih",
+            "lastModified": "2018-11-14T09:10:30Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7120ih/summary",
+            "docClass": "hr",
+            "title": "To amend the Federal Election Campaign Act of 1971 to extend through 2023 the authority of the Federal Election Commission to impose civil money penalties on the basis of a schedule of penalties established and published by the Commission."
+        },
+        {
+            "packageId": "BILLS-115hres1145ih",
+            "lastModified": "2018-11-14T09:10:20Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1145ih/summary",
+            "docClass": "hres",
+            "title": "Expressing the need for bold climate action in response to the release of the United Nations report titled Global Warming of 1.5 degrees Celsius, an IPCC special report on the impacts of global warming of 1.5 degrees Celsius above pre-industrial levels and related global greenhouse gas emission pathways in the context of strengthening the global response to the threat of climate change, sustainable development, and efforts to eradicate poverty."
+        },
+        {
+            "packageId": "BILLS-115hr7119ih",
+            "lastModified": "2018-11-14T09:10:20Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7119ih/summary",
+            "docClass": "hr",
+            "title": "To amend title 38, United States Code, to extend the authority of the Secretary of Veterans Affairs to continue to pay educational assistance or subsistence allowances to eligible persons when educational institutions are temporarily closed, and for other purposes."
+        },
+        {
+            "packageId": "BILLS-115hconres141ih",
+            "lastModified": "2018-11-14T06:13:03Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hconres141ih/summary",
+            "docClass": "hconres",
+            "title": "Expressing the sense of Congress that public health professionals should be commended for their dedication and service to the United States on Public Health Thank You Day, November 19, 2018."
+        },
+        {
+            "packageId": "BILLS-115hres1144ih",
+            "lastModified": "2018-11-14T06:12:58Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1144ih/summary",
+            "docClass": "hres",
+            "title": "Recognizing November 24, 2018, as Small Business Saturday and supporting efforts to increase awareness of the value of locally owned small businesses."
+        },
+        {
+            "packageId": "BILLS-115hres1142rh",
+            "lastModified": "2018-11-14T05:34:36Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1142rh/summary",
+            "docClass": "hres",
+            "title": "Providing for consideration of the bill (H.R. 6784) to provide for removal of the gray wolf in the contiguous 48 States from the List of Endangered and Threatened Wildlife published under the Endangered Species Act of 1973, and providing for proceedings during the period from November 19, 2018, through November 26, 2018."
+        },
+        {
+            "packageId": "BILLS-115hr4673rh",
+            "lastModified": "2018-11-14T03:03:48Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr4673rh/summary",
+            "docClass": "hr",
+            "title": "Promoting Women in the Aviation Workforce Act"
+        },
+        {
+            "packageId": "BILLS-115hr5319rh",
+            "lastModified": "2018-11-14T03:03:46Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr5319rh/summary",
+            "docClass": "hr",
+            "title": "To transfer Coast Guard property in the Town of Jupiter Island, Florida, for inclusion in Hobe Sound National Wildlife Refuge."
+        },
+        {
+            "packageId": "BILLS-115hr5326rh",
+            "lastModified": "2018-11-14T03:03:32Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr5326rh/summary",
+            "docClass": "hr",
+            "title": "Maritime Technical Corrections Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr6175rh",
+            "lastModified": "2018-11-14T03:03:31Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6175rh/summary",
+            "docClass": "hr",
+            "title": "Maritime Safety Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr2593rh",
+            "lastModified": "2018-11-14T03:03:21Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr2593rh/summary",
+            "docClass": "hr",
+            "title": "Federal Maritime Commission Authorization Act of 2017"
+        },
+        {
+            "packageId": "BILLS-115hr6206rh",
+            "lastModified": "2018-11-14T03:03:15Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6206rh/summary",
+            "docClass": "hr",
+            "title": "Coast Guard Blue Technology Center of Expertise Act"
+        },
+        {
+            "packageId": "BILLS-115hr6622rh",
+            "lastModified": "2018-11-14T03:03:14Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6622rh/summary",
+            "docClass": "hr",
+            "title": "To designate the Federal building located at 2110 First Street in Fort Myers, Florida, as the George W. Whitehurst Federal Building."
+        },
+        {
+            "packageId": "BILLS-115hr6784rh",
+            "lastModified": "2018-11-12T01:51:05Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6784rh/summary",
+            "docClass": "hr",
+            "title": "Manage our Wolves Act"
+        },
+        {
+            "packageId": "BILLS-115hres1139ih",
+            "lastModified": "2018-11-10T05:17:47Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1139ih/summary",
+            "docClass": "hres",
+            "title": "Acknowledging the 50th anniversary of the election of Shirley Anita St. Hill Chisholm, the first African-American woman in Congress."
+        },
+        {
+            "packageId": "BILLS-115hres1141ih",
+            "lastModified": "2018-11-10T05:17:42Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1141ih/summary",
+            "docClass": "hres",
+            "title": "Commemorating and acknowledging veteran-owned small businesses."
+        },
+        {
+            "packageId": "BILLS-115hres1140ih",
+            "lastModified": "2018-11-10T05:17:37Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1140ih/summary",
+            "docClass": "hres",
+            "title": "Recognizing the denial of full voting rights in Congress for veterans and their families who are District of Columbia residents."
+        },
+        {
+            "packageId": "BILLS-115hr6651rh",
+            "lastModified": "2018-11-10T05:10:53Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6651rh/summary",
+            "docClass": "hr",
+            "title": "PEPFAR Extension Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr2365rh",
+            "lastModified": "2018-11-10T05:10:52Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr2365rh/summary",
+            "docClass": "hr",
+            "title": "Desert Community Lands Act"
+        },
+        {
+            "packageId": "BILLS-115hr7116ih",
+            "lastModified": "2018-11-08T18:30:47Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7116ih/summary",
+            "docClass": "hr",
+            "title": "Suicide Prevention Assistance Act"
+        },
+        {
+            "packageId": "BILLS-115hr7117ih",
+            "lastModified": "2018-11-07T05:16:38Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7117ih/summary",
+            "docClass": "hr",
+            "title": "Bots Research Act"
+        },
+        {
+            "packageId": "BILLS-115hres1138ih",
+            "lastModified": "2018-11-07T05:16:37Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hres1138ih/summary",
+            "docClass": "hres",
+            "title": "Condemning the anti-Semitic attack on the building housing three congregations, Tree of Life, Dor Hadash, and New Light, honoring the memory of the victims of the attack, and offering condolences to and expressing support for their families, friends, and community."
+        },
+        {
+            "packageId": "BILLS-115hr7118ih",
+            "lastModified": "2018-11-07T05:16:37Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7118ih/summary",
+            "docClass": "hr",
+            "title": "Excessive Use of Force Prevention Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr7114ih",
+            "lastModified": "2018-11-06T05:26:09Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7114ih/summary",
+            "docClass": "hr",
+            "title": "Natural Disaster Safe Inmate Relocation Act"
+        },
+        {
+            "packageId": "BILLS-115hr7057ih",
+            "lastModified": "2018-11-06T05:26:08Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7057ih/summary",
+            "docClass": "hr",
+            "title": "Child and Dependent Care Modernization Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr6032rh",
+            "lastModified": "2018-11-05T02:28:04Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6032rh/summary",
+            "docClass": "hr",
+            "title": "State of Modern Application, Research, and Trends of IoT Act; SMART IoT Act"
+        },
+        {
+            "packageId": "BILLS-115hr7115ih",
+            "lastModified": "2018-11-03T04:32:28Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7115ih/summary",
+            "docClass": "hr",
+            "title": "3–D Firearms Prohibitions Act"
+        },
+        {
+            "packageId": "BILLS-115hr3861rh",
+            "lastModified": "2018-11-03T04:32:28Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr3861rh/summary",
+            "docClass": "hr",
+            "title": "Federal Insurance Office Reform Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr5347rh",
+            "lastModified": "2018-11-03T04:32:23Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr5347rh/summary",
+            "docClass": "hr",
+            "title": "Lyon County Economic Development and Environmental Remediation Act"
+        },
+        {
+            "packageId": "BILLS-115hr7113ih",
+            "lastModified": "2018-11-03T04:32:23Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7113ih/summary",
+            "docClass": "hr",
+            "title": "Combat Violent Crime Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr7096ih",
+            "lastModified": "2018-11-03T04:32:18Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr7096ih/summary",
+            "docClass": "hr",
+            "title": "Office of Disability Congressional Research Act of 2018"
+        },
+        {
+            "packageId": "BILLS-115hr4239rh",
+            "lastModified": "2018-11-03T04:32:13Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr4239rh/summary",
+            "docClass": "hr",
+            "title": "Strengthening the Economy with Critical Untapped Resources to Expand American Energy Act; SECURE American Energy Act"
+        },
+        {
+            "packageId": "BILLS-115hr6087rh",
+            "lastModified": "2018-11-03T02:33:22Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6087rh/summary",
+            "docClass": "hr",
+            "title": "Removing Barriers to Energy Independence Act"
+        },
+        {
+            "packageId": "BILLS-115hr6434rh",
+            "lastModified": "2018-11-03T02:32:57Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6434rh/summary",
+            "docClass": "hr",
+            "title": "To amend section 7 of Public Law 100–515 (16 U.S.C. 1244 note) to promote continued use of the James J. Howard Marine Sciences Laboratory at Gateway National Recreation Area by the National Oceanic and Atmospheric Administration."
+        },
+        {
+            "packageId": "BILLS-115hr6107rh",
+            "lastModified": "2018-11-03T02:32:50Z",
+            "packageLink": "https://api.govinfo.gov/packages/BILLS-115hr6107rh/summary",
+            "docClass": "hr",
+            "title": "Ending Duplicative Permitting Act"
+        }
+    ]
+}
