@@ -48,7 +48,7 @@ class CollectionRequestor
     public function setIntOffSet(int $intOffSet)
     {
         if ($intOffSet < 0) {
-            throw new \LogicException('Offset must be greater than zero');
+            throw new \LogicException('Offset must be greater than or equal to zero');
         }
         
         $this->intOffSet = $intOffSet;
