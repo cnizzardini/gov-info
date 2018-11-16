@@ -16,7 +16,7 @@ composer require cnizzardini/gov-info
 use Cnizzardini\GovInfo\Api;
 use Cnizzardini\GovInfo\Collections;
 
-$api = new Api(\GuzzleHttp\Client $objHttp, 'DEMO_KEY');
+$api = new Api(new \GuzzleHttp\Client(), 'DEMO_KEY');
 $collection = new Collection($api);
 $collection->get();
 ```
