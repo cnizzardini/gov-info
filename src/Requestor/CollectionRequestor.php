@@ -1,7 +1,7 @@
 <?php
 namespace Cnizzardini\GovInfo\Requestor;
 
-class BillCollection
+class CollectionRequestor
 {
     private $objStartDate = null,
             $objEndDate = null,
