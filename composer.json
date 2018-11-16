@@ -1,0 +1,37 @@
+{
+    "name": "cnizzardini/gov-info",
+    "description": "Library for using api.govinfo.gov",
+    "keywords": [
+        "gov",
+        "govinfo",
+        "govinfo.gov",
+        "api.govinfo.gov"
+    ],
+    "homepage": "https://github.com/cnizzardini/gov-info",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Freek Van der Herten",
+            "email": "freek@spatie.be",
+            "homepage": "https://murze.be",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "^7.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "~6.0",
+        "phpunit/phpunit": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cnizzardini\\GovInfo\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cnizzardini\\GovInfo\\Test\\": "tests"
+        }
+    }
+}
