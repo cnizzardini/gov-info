@@ -4,7 +4,7 @@ namespace Cnizzardini\GovInfo;
 
 class Api
 {
-    const URL = 'https://api.govinfo.gov/';
+    const URL = 'api.govinfo.gov';
     private $objHttp;
     private $strApiKey;
     
@@ -23,13 +23,17 @@ class Api
     /**
      * HTTP GET
      * 
-     * @param string $strEndPoint
+     * @param \GuzzleHttp\Psr7\Uri $objUri
      * @return \stdClass
      */
-    public function get(string $strEndPoint) : \stdClass
+    public function get(\GuzzleHttp\Psr7\Uri $objUri) : \stdClass
     {
-        $strUrl = ''; //self::URL . $strEndPoint . '?api_key=' . $this->strApiKey;
-        $objResponse = $this->objHttp->get($strUrl);
+        if (empty($objUri->getPath())) {
+            throw new \LogicException('Uri must contain a valid path');
+        }
+        
+        $objResponse = $this->objHttp->get($objUri->withHost(self::URL)->withPort(443));
+        
         return json_decode($objResponse->getBody()->getContents());
     }
     
