@@ -12,6 +12,8 @@ composer require cnizzardini/gov-info
 
 ## Usage
 
+Retrieve an index of all collections available
+
 ```php
 use Cnizzardini\GovInfo\Api;
 use Cnizzardini\GovInfo\Collections;
@@ -35,16 +37,78 @@ stdClass Object
                     [packageCount] => 1134933
                     [granuleCount] => 2525240
                 )
-
-            [1] => stdClass Object
-                (
-                    [collectionCode] => BILLS
-                    [collectionName] => Congressional Bills
-                    [packageCount] => 202767
-                    [granuleCount] => 
-                )
+        ...
 )
 
+```
+
+Retrieve all packages in a collection
+
+```php
+use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
+
+$requestor = new CollectionRequestor();
+
+$result = $collection->item($$requestor->setStrCollectionCode('BILLS'));
+
+```
+
+After running this code `$result` will contain a non-truncated version of collections:
+
+```
+stdClass Object
+(
+    [count] => 202767
+    [message] => 
+    [nextPage] => https://api.govinfo.gov/collections/BILLS/2018-01-01T00:00:00Z/?offset=100&pageSize=100
+    [previousPage] => 
+    [packages] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [packageId] => BILLS-115hr2740rfs
+                    [lastModified] => 2018-11-16T00:33:17Z
+                    [packageLink] => https://api.govinfo.gov/packages/BILLS-115hr2740rfs/summary
+                    [docClass] => hr
+                    [title] => Rabbi Michoel Ber Weissmandl Congressional Gold Medal Act of 2017
+                )
+        ...
+```
+
+Retrieve a specific packages in a collection. 
+
+```php
+use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
+
+$requestor = new CollectionRequestor();
+$requestor->setStrCollectionCode('BILLS')->setObjStartDate(new \DateTime('2018-01-01 12:00:00'))
+    ->setObjEndDate(new \DateTime('2018-02-01 12:00:00'))->setStrDocClass('hr')
+    ->setStrPackageId('BILLS-115hr4033rfs')->setStrTitle('Geologic Mapping Act');
+
+$result = $collection->item($requestor);
+```
+
+After running this code `$result` will contain a non-truncated version of collections:
+
+```
+stdClass Object
+(
+    [count] => 202767
+    [message] => 
+    [nextPage] => https://api.govinfo.gov/collections/BILLS/2018-01-01T00:00:00Z/?offset=100&pageSize=100
+    [previousPage] => 
+    [packages] => Array
+        (
+            [2] => stdClass Object
+                (
+                    [packageId] => BILLS-115hr4033rfs
+                    [lastModified] => 2018-11-16T00:33:00Z
+                    [packageLink] => https://api.govinfo.gov/packages/BILLS-115hr4033rfs/summary
+                    [docClass] => hr
+                    [title] => National Geologic Mapping Act Reauthorization Act
+                )
+        )
+)
 ```
 
 ## Testing
