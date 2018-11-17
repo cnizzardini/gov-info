@@ -1,27 +1,32 @@
 <?php
+
 namespace Cnizzardini\GovInfo\Requestor;
 
-class PackageRequestor
+use Cnizzardini\GovInfo\Requestor\Requestor;
+
+class PackageRequestor extends Requestor
 {
-    private $strPackgeId = '',
+    private $strPackageId = '',
             $strGranuleId = '',
-            $strContentType = '';
+            $strContentType = '',
+            $intPageSize = 100,
+            $intOffSet = 0;
 
     /**
      * 
      * @param string $strPackgeId
-     * @return Cnizzardini\GovInfo\Requestor
+     * @return Cnizzardini\GovInfo\Requestor\PackageRequestor
      */
-    public function setStrPackgeId(string $strPackgeId) 
+    public function setStrPackageId(string $strPackageId) 
     {
-        $this->strPackgeId = $strPackgeId;
+        $this->strPackageId = $strPackageId;
         return $this;
     }
 
     /**
      * 
      * @param string $strGranuleId
-     * @return Cnizzardini\GovInfo\Requestor
+     * @return Cnizzardini\GovInfo\Requestor\PackageRequestor
      */
     public function setStrGranuleId(string $strGranuleId) {
         $this->strGranuleId = $strGranuleId;
@@ -31,7 +36,7 @@ class PackageRequestor
     /**
      * 
      * @param string $strContentType
-     * @return Cnizzardini\GovInfo\Requestor
+     * @return Cnizzardini\GovInfo\Requestor\PackageRequestor
      */
     public function setStrContentType(string $strContentType) {
         $this->strContentType = $strContentType;
@@ -42,9 +47,9 @@ class PackageRequestor
      * 
      * @return string
      */
-    public function getStrPackgeId() 
+    public function getStrPackageId() 
     {
-        return $this->strPackgeId;
+        return $this->strPackageId;
     }
 
     /**
@@ -63,5 +68,5 @@ class PackageRequestor
     public function getStrContentType() 
     {
         return $this->strContentType;
-    }
+    } 
 }
