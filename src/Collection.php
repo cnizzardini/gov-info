@@ -36,14 +36,13 @@ class Collection
      */
     public function item(\Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor) : \stdClass
     {
-        $objUri = new Uri();
-        
-        $objUri = $objUri->withQueryValue($objUri, 'pageSize', $objRequestor->getIntPageSize());
-        $objUri = $objUri->withQueryValue($objUri, 'offset', $objRequestor->getIntOffSet());
-        
         if (empty($objRequestor->getStrCollectionCode())) {
             throw new \LogicException('CollectionRequestor::strCollectionCode is required');
         }
+        
+        $objUri = new Uri();
+        $objUri = $objUri->withQueryValue($objUri, 'pageSize', $objRequestor->getIntPageSize());
+        $objUri = $objUri->withQueryValue($objUri, 'offset', $objRequestor->getIntOffSet());
         
         $strPath = self::ENDPOINT . '/' . $objRequestor->getStrCollectionCode();
         
