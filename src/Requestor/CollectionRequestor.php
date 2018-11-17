@@ -13,33 +13,40 @@ class CollectionRequestor
     /**
      * 
      * @param string $strCollectionCode
+     * @return Cnizzardini\GovInfo\Requestor
      */
     public function setStrCollectionCode(string $strCollectionCode)
     {
         $this->strCollectionCode = $strCollectionCode;
+        return $this;
     }
     
     /**
      * 
      * @param \DateTime $objStartDate
+     * @return Cnizzardini\GovInfo\Requestor
      */
     public function setObjStartDate(\DateTime $objStartDate)
     {
         $this->objStartDate = $objStartDate;
+        return $this;
     }
     
     /**
      * 
      * @param \DateTime $objEndDate
+     * @return Cnizzardini\GovInfo\Requestor
      */
     public function setObjEndDate(\DateTime $objEndDate)
     {
         $this->objEndDate = $objEndDate;
+        return $this;
     }
     
     /**
      * 
      * @param int $intPageSize
+     * @return Cnizzardini\GovInfo\Requestor
      * @throws \LogicException
      */
     public function setIntPageSize(int $intPageSize)
@@ -49,11 +56,13 @@ class CollectionRequestor
         }
         
         $this->intPageSize = $intPageSize;
+        return $this;
     }
     
     /**
      * 
      * @param int $intOffSet
+     * @return Cnizzardini\GovInfo\Requestor
      * @throws \LogicException
      */
     public function setIntOffSet(int $intOffSet)
@@ -63,6 +72,7 @@ class CollectionRequestor
         }
         
         $this->intOffSet = $intOffSet;
+        return $this;
     }
     
     /**
@@ -72,6 +82,7 @@ class CollectionRequestor
     public function setStrDocClass(string $strDocClass)
     {
         $this->strDocClass = $strDocClass;
+        return $this;
     }
     
     /**
