@@ -38,8 +38,9 @@ class CollectionTest extends TestCase
         
         $objApi = new Api($objClient, self::KEY);
         $objCollection = new Collection($objApi);
+        $objRequestor = new CollectionRequestor();
         
-        $objResult = $objCollection->item('BILLS', new CollectionRequestor());
+        $objResult = $objCollection->item($objRequestor->setStrCollectionCode('BILLS'));
         $objItem = reset($objResult->packages);
         $this->assertEquals('BILLS-115hr2740rfs', $objItem->packageId);
     }
@@ -55,10 +56,10 @@ class CollectionTest extends TestCase
         $objApi = new Api($objClient, self::KEY);
         $objCollection = new Collection($objApi);
         $objRequestor = new CollectionRequestor();
-        $objRequestor->setObjStartDate(new \DateTime('2018-01-01 12:00:00'));
-        $objRequestor->setObjEndDate(new \DateTime('2018-02-01 12:00:00'));
+        $objRequestor->setStrCollectionCode('BILLS')->setObjStartDate(new \DateTime('2018-01-01 12:00:00'))
+                    ->setObjEndDate(new \DateTime('2018-02-01 12:00:00'))->setStrDocClass('hr');
         
-        $objResult = $objCollection->item('BILLS', $objRequestor);
+        $objResult = $objCollection->item($objRequestor);
         $objItem = reset($objResult->packages);
         $this->assertEquals('BILLS-115hr2740rfs', $objItem->packageId);
     }    
