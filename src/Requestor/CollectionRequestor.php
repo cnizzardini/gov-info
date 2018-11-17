@@ -93,7 +93,7 @@ class CollectionRequestor
      * @param string $strTitle
      * @return Cnizzardini\GovInfo\Requestor
      */
-    public function setTitle(string $strTitle)
+    public function setStrTitle(string $strTitle)
     {
         $this->strTitle = $strTitle;
         return $this;
