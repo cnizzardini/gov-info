@@ -25,7 +25,7 @@ class Collection
     public function index() : \stdClass
     {
         $objUri = new Uri();
-        return $this->objApi->get($objUri->withPath(self::ENDPOINT));
+        return $this->objApi->getObject($objUri->withPath(self::ENDPOINT));
     }
     
     /**
@@ -54,7 +54,7 @@ class Collection
             $strPath.= '/' . urlencode($objRequestor->getObjEndDate()->format('Y-m-d H:i:s'));
         }
         
-        $objResult = $this->objApi->get($objUri->withPath($strPath));
+        $objResult = $this->objApi->getObject($objUri->withPath($strPath));
         
         return $this->filterPackages($objResult, $objRequestor);
     }
