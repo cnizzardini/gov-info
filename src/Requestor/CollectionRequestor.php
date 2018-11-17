@@ -139,7 +139,7 @@ class CollectionRequestor
     
     /**
      * 
-     * @return int|null
+     * @return int
      */
     public function getIntPageSize()
     {
@@ -148,7 +148,7 @@ class CollectionRequestor
     
     /**
      * 
-     * @return int|null
+     * @return int
      */
     public function getIntOffSet()
     {
