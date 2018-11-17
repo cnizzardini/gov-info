@@ -7,7 +7,6 @@ class Requestor
     private $intPageSize = 100,
             $intOffSet = 0;
     
-    
     /**
      * 
      * @param int $intPageSize
