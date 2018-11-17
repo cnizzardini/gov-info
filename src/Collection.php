@@ -53,17 +53,45 @@ class Collection
         
         $objResult = $this->objApi->get($objUri->withPath($strPath));
         
+        return $this->filterPackages($objResult, $objRequestor);
+    }
+    
+    /**
+     * Filters packages
+     * 
+     * @param \stdClass $objResult
+     * @param \Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor
+     * @return \stdClass
+     */
+    private function filterPackages(\stdClass $objResult, \Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor) : \stdClass
+    {
         $strDocClass = $objRequestor->getStrDocClass();
+        $strTitle = $objRequestor->getStrTitle();
+        $strPackageId = $objRequestor->getStrPackageId();
         
-        if (empty($strDocClass)) {
-            return $objResult;
+        if (!empty($strDocClass)) {
+            $objResult->packages = array_filter($objResult->packages, function($objPackage) use ($strDocClass) {
+                if ($objPackage->docClass == $strDocClass) {
+                    return $objPackage;
+                }
+            });
         }
         
-        $objResult->packages = array_filter($objResult->packages, function($objPackage) use ($strDocClass) {
-            if ($objPackage->docClass == $strDocClass) {
-                return $objPackage;
-            }
-        });
+        if (!empty($strTitle)) {
+            $objResult->packages = array_filter($objResult->packages, function($objPackage) use ($strTitle) {
+                if (preg_match("/$strTitle/i", $objPackage->title)) {
+                    return $objPackage;
+                }
+            });
+        }
+        
+        if (!empty($strPackageId)) {
+            $objResult->packages = array_filter($objResult->packages, function($objPackage) use ($strPackageId) {
+                if ($objPackage->packageId == $strPackageId) {
+                    return $objPackage;
+                }
+            });
+        }
         
         return $objResult;
     }
