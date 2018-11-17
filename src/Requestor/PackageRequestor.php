@@ -8,13 +8,11 @@ class PackageRequestor extends Requestor
 {
     private $strPackageId = '',
             $strGranuleId = '',
-            $strContentType = '',
-            $intPageSize = 100,
-            $intOffSet = 0;
+            $strContentType = '';
 
     /**
      * 
-     * @param string $strPackgeId
+     * @param string $strPackageId
      * @return Cnizzardini\GovInfo\Requestor\PackageRequestor
      */
     public function setStrPackageId(string $strPackageId) 
