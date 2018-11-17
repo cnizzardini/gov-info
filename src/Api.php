@@ -39,7 +39,7 @@ class Api
     }
     
     /**
-     * HTTP GET
+     * Performs HTTP GET and returns as an object
      * 
      * @param \GuzzleHttp\Psr7\Uri $objUri
      * @return \stdClass
