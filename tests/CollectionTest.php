@@ -12,7 +12,7 @@ class CollectionTest extends TestCase
     const KEY = 'DEMO_KEY';
     const FIXTURES = __DIR__ . '/fixtures/';
     
-    public function testGet()
+    public function testIndex()
     {
         $objMockHandler = new MockHandler();
         $objMockHandler->append(new Response(200, [], file_get_contents(self::FIXTURES . 'collections.json')));

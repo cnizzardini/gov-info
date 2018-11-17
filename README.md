@@ -18,7 +18,7 @@ use Cnizzardini\GovInfo\Collections;
 
 $api = new Api(new \GuzzleHttp\Client(), 'DEMO_KEY');
 $collection = new Collection($api);
-$result = $collection->get();
+$result = $collection->index();
 ```
 
 After running this code `$result` will contain a non-truncated version of collections:
