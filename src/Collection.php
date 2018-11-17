@@ -41,6 +41,10 @@ class Collection
         $objUri = $objUri->withQueryValue($objUri, 'pageSize', $objRequestor->getIntPageSize());
         $objUri = $objUri->withQueryValue($objUri, 'offset', $objRequestor->getIntOffSet());
         
+        if (empty($objRequestor->getStrCollectionCode())) {
+            throw new \LogicException('CollectionRequestor::strCollectionCode is required');
+        }
+        
         $strPath = self::COLLECTIONS_ENDPOINT . '/' . $objRequestor->getStrCollectionCode();
         
         if ($objRequestor->getObjStartDate()) {
