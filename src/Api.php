@@ -32,7 +32,9 @@ class Api
             throw new \LogicException('Uri must contain a valid path');
         }
         
-        $objResponse = $this->objHttp->get($objUri->withHost(self::URL)->withPort(443));
+        $objUri = $objUri->withHost(self::URL)->withScheme('https');
+        
+        $objResponse = $this->objHttp->get($objUri->withQueryValue($objUri, 'api_key', $this->strApiKey));
         
         return json_decode($objResponse->getBody()->getContents());
     }
