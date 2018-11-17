@@ -31,18 +31,17 @@ class Collection
     /**
      * Returns a type of collection
      * 
-     * @param string $type
      * @param \Cnizzardini\GovInfo\Requestor\Collection $objRequestor
      * @return \stdClass
      */
-    public function item(string $strCollectionCode, \Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor) : \stdClass
+    public function item(\Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor) : \stdClass
     {
         $objUri = new Uri();
         
         $objUri = $objUri->withQueryValue($objUri, 'pageSize', $objRequestor->getIntPageSize());
         $objUri = $objUri->withQueryValue($objUri, 'offset', $objRequestor->getIntOffSet());
         
-        $strPath = self::COLLECTIONS_ENDPOINT . '/' . $strCollectionCode;
+        $strPath = self::COLLECTIONS_ENDPOINT . '/' . $objRequestor->getStrCollectionCode();
         
         if ($objRequestor->getObjStartDate()) {
             $strPath.= '/' . urlencode($objRequestor->getObjStartDate()->format('Y-m-d H:i:s'));
@@ -52,6 +51,20 @@ class Collection
             $strPath.= '/' . urlencode($objRequestor->getObjEndDate()->format('Y-m-d H:i:s'));
         }
         
-        return $this->objApi->get($objUri->withPath($strPath));
+        $objResult = $this->objApi->get($objUri->withPath($strPath));
+        
+        $strDocClass = $objRequestor->getStrDocClass();
+        
+        if (empty($strDocClass)) {
+            return $objResult;
+        }
+        
+        $objResult->packages = array_filter($objResult->packages, function($objPackage) use ($strDocClass) {
+            if ($objPackage->docClass == $strDocClass) {
+                return $objPackage;
+            }
+        });
+        
+        return $objResult;
     }
 }
