@@ -24,18 +24,29 @@ class Api
      * HTTP GET
      * 
      * @param \GuzzleHttp\Psr7\Uri $objUri
-     * @return \stdClass
+     * @return \GuzzleHttp\Psr7\Response
      */
-    public function get(\GuzzleHttp\Psr7\Uri $objUri) : \stdClass
+    public function get(\GuzzleHttp\Psr7\Uri $objUri) : \GuzzleHttp\Psr7\Response
     {
         if (empty($objUri->getPath())) {
             throw new \LogicException('Uri must contain a valid path');
         }
         
         $objUri = $objUri->withHost(self::URL)->withScheme('https');
+        $objUri = $objUri->withQueryValue($objUri, 'api_key', $this->strApiKey);
         
-        $objResponse = $this->objHttp->get($objUri->withQueryValue($objUri, 'api_key', $this->strApiKey));
-        
+        return $this->objHttp->get($objUri);
+    }
+    
+    /**
+     * HTTP GET
+     * 
+     * @param \GuzzleHttp\Psr7\Uri $objUri
+     * @return \stdClass
+     */
+    public function getObject(\GuzzleHttp\Psr7\Uri $objUri) : \stdClass
+    {
+        $objResponse = $this->get($objUri);
         return json_decode($objResponse->getBody()->getContents());
     }
     
