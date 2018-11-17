@@ -10,7 +10,7 @@ use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
 class CollectionTest extends TestCase
 {
     const KEY = 'DEMO_KEY';
-    const FIXTURES = __DIR__ . '/fixtures/';
+    const FIXTURES = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'fixtures' . DIRECTORY_SEPARATOR;
     
     public function testIndex()
     {
