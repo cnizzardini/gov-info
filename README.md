@@ -1,5 +1,8 @@
 # PHP Library for api.govinfo.gov
 
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Total Downloads](https://img.shields.io/packagist/dt/spatie/array-to-xml.svg?style=flat-square)](https://packagist.org/packages/cnizzardini/gov-info)
+
 This alpha stage package provides a very simple way to access api.govinfo.gov
 
 ## Install
