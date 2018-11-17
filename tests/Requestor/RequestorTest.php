@@ -2,7 +2,7 @@
 use PHPUnit\Framework\TestCase;
 use Cnizzardini\GovInfo\Requestor\Requestor;
 
-class ApiTest extends TestCase
+class RequestorTest extends TestCase
 {
     const PAGE_SIZE = 1000;
     const OFF_SET = 3;
