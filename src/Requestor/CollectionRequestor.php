@@ -1,7 +1,10 @@
 <?php
+
 namespace Cnizzardini\GovInfo\Requestor;
 
-class CollectionRequestor
+use Cnizzardini\GovInfo\Requestor\Requestor;
+
+class CollectionRequestor extends Requestor
 {
     private $strCollectionCode = '',
             $objStartDate = null,
@@ -42,38 +45,6 @@ class CollectionRequestor
     public function setObjEndDate(\DateTime $objEndDate)
     {
         $this->objEndDate = $objEndDate;
-        return $this;
-    }
-    
-    /**
-     * 
-     * @param int $intPageSize
-     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
-     * @throws \LogicException
-     */
-    public function setIntPageSize(int $intPageSize)
-    {
-        if ($intPageSize < 1) {
-            throw new \LogicException('Pagesize must be greater than zero');
-        }
-        
-        $this->intPageSize = $intPageSize;
-        return $this;
-    }
-    
-    /**
-     * 
-     * @param int $intOffSet
-     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
-     * @throws \LogicException
-     */
-    public function setIntOffSet(int $intOffSet)
-    {
-        if ($intOffSet < 0) {
-            throw new \LogicException('Offset must be greater than or equal to zero');
-        }
-        
-        $this->intOffSet = $intOffSet;
         return $this;
     }
     
@@ -135,24 +106,6 @@ class CollectionRequestor
     public function getObjEndDate()
     {
         return $this->objEndDate;
-    }
-    
-    /**
-     * 
-     * @return int
-     */
-    public function getIntPageSize()
-    {
-        return $this->intPageSize;
-    }
-    
-    /**
-     * 
-     * @return int
-     */
-    public function getIntOffSet()
-    {
-        return $this->intOffSet;
     }
     
     /**
