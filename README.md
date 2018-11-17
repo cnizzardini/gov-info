@@ -53,7 +53,7 @@ $result = $collection->item($requestor->setStrCollectionCode('BILLS'));
 
 ```
 
-After running this code `$result` will contain a non-truncated version of collections:
+After running this code `$result` will contain a non-truncated version of packages:
 
 ```
 stdClass Object
@@ -88,7 +88,7 @@ $requestor->setStrCollectionCode('BILLS')->setObjStartDate(new \DateTime('2018-0
 $result = $collection->item($requestor);
 ```
 
-After running this code `$result` will contain a non-truncated version of collections:
+After running this code `$result` will contain the requested package
 
 ```
 stdClass Object
