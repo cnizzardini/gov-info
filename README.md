@@ -122,7 +122,7 @@ $requestor->setStrPackageId('BILLS-115hr4033rfs');
 $result = $package->summary();
 ```
 
-After running this code `$result` will a non-truncated version of the package summary
+After running this code `$result` will contain a non-truncated version of the package summary
 
 ```
 stdClass Object
