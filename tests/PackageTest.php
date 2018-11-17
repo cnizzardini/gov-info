@@ -9,7 +9,7 @@ use Cnizzardini\GovInfo\Requestor\PackageRequestor;
 
 class PackageTest extends TestCase
 {
-    const KEY = 'Xt1A98BrCYNdLvJw3e2gvJoi0CxVYgfbWHYJVwPe';
+    const KEY = 'DEMO_KEY';
     const FIXTURES = __DIR__ . '/fixtures/';
     
     public function testSummary()
