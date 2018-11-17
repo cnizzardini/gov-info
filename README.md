@@ -108,6 +108,51 @@ stdClass Object
 )
 ```
 
+Retrieve a summary of a package.
+
+```php
+use Cnizzardini\GovInfo\Package;
+use Cnizzardini\GovInfo\Requestor\PackageRequestor;
+
+$package = new Package($api);
+
+$requestor = new PackageRequestor();
+$requestor->setStrPackageId('BILLS-115hr4033rfs');
+
+$result = $package->summary();
+```
+
+After running this code `$result` will a non-truncated version of the package summary
+
+```
+stdClass Object
+(
+    [title] => An Act To reauthorize the National Geologic Mapping Act of 1992.
+    [shortTitle] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [type] => measure
+                    [title] => National Geologic Mapping Act Reauthorization Act
+                )
+
+        )
+    ...
+```
+
+Retrieve a package as a specified content-type
+
+```php
+$package = new Package($api);
+
+$requestor = new PackageRequestor();
+$requestor->setStrPackageId('BILLS-115hr4033rfs')->setStrContentType('xml');
+
+$result = $package->contentType();
+```
+
+After running this code `$result` will be an instance of GuzzleHttp\Psr7\Response
+
 ## Testing
 
 ```bash
