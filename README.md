@@ -75,7 +75,7 @@ stdClass Object
         ...
 ```
 
-Retrieve a specific packages in a collection. 
+Retrieve a specific package in a collection. 
 
 ```php
 $requestor->setStrCollectionCode('BILLS')->setObjStartDate(new \DateTime('2018-01-01 12:00:00'))
