@@ -5,7 +5,7 @@ use GuzzleHttp\Psr7\Uri;
 
 class Collection
 {
-    const COLLECTIONS_ENDPOINT = 'collections';
+    const ENDPOINT = 'collections';
     
     /**
      * Constructs an instance
@@ -25,7 +25,7 @@ class Collection
     public function index() : \stdClass
     {
         $objUri = new Uri();
-        return $this->objApi->get($objUri->withPath(self::COLLECTIONS_ENDPOINT));
+        return $this->objApi->get($objUri->withPath(self::ENDPOINT));
     }
     
     /**
@@ -45,7 +45,7 @@ class Collection
             throw new \LogicException('CollectionRequestor::strCollectionCode is required');
         }
         
-        $strPath = self::COLLECTIONS_ENDPOINT . '/' . $objRequestor->getStrCollectionCode();
+        $strPath = self::ENDPOINT . '/' . $objRequestor->getStrCollectionCode();
         
         if ($objRequestor->getObjStartDate()) {
             $strPath.= '/' . urlencode($objRequestor->getObjStartDate()->format('Y-m-d H:i:s'));
