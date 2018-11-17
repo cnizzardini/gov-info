@@ -117,9 +117,8 @@ use Cnizzardini\GovInfo\Requestor\PackageRequestor;
 $package = new Package($api);
 
 $requestor = new PackageRequestor();
-$requestor->setStrPackageId('BILLS-115hr4033rfs');
 
-$result = $package->summary();
+$result = $package->summary($requestor->setStrPackageId('BILLS-115hr4033rfs'));
 ```
 
 After running this code `$result` will contain a non-truncated version of the package summary
