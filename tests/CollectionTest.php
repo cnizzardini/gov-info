@@ -57,10 +57,12 @@ class CollectionTest extends TestCase
         $objCollection = new Collection($objApi);
         $objRequestor = new CollectionRequestor();
         $objRequestor->setStrCollectionCode('BILLS')->setObjStartDate(new \DateTime('2018-01-01 12:00:00'))
-                    ->setObjEndDate(new \DateTime('2018-02-01 12:00:00'))->setStrDocClass('hr');
+            ->setObjEndDate(new \DateTime('2018-02-01 12:00:00'))->setStrDocClass('hr')
+            ->setStrPackageId('BILLS-115hr4033rfs')->setStrTitle('Geologic Mapping Act');
         
         $objResult = $objCollection->item($objRequestor);
+        
         $objItem = reset($objResult->packages);
-        $this->assertEquals('BILLS-115hr2740rfs', $objItem->packageId);
+        $this->assertEquals('BILLS-115hr4033rfs', $objItem->packageId);
     }    
 }
