@@ -1,0 +1,76 @@
+{
+    "title": "An Act To reauthorize the National Geologic Mapping Act of 1992.",
+    "shortTitle": [
+        {
+            "type": "measure",
+            "title": "National Geologic Mapping Act Reauthorization Act"
+        }
+    ],
+    "collectionCode": "BILLS",
+    "collectionName": "Congressional Bills",
+    "category": "Bills and Statutes",
+    "dateIssued": "2018-11-14",
+    "detailsLink": "https://www.govinfo.gov/app/details/BILLS-115hr4033rfs",
+    "packageId": "BILLS-115hr4033rfs",
+    "download": {
+        "txtLink": "https://api.govinfo.gov/packages/BILLS-115hr4033rfs/htm",
+        "xmlLink": "https://api.govinfo.gov/packages/BILLS-115hr4033rfs/xml",
+        "pdfLink": "https://api.govinfo.gov/packages/BILLS-115hr4033rfs/pdf",
+        "modsLink": "https://api.govinfo.gov/packages/BILLS-115hr4033rfs/mods",
+        "premisLink": "https://api.govinfo.gov/packages/BILLS-115hr4033rfs/premis",
+        "zipLink": "https://api.govinfo.gov/packages/BILLS-115hr4033rfs/zip"
+    },
+    "related": {
+        "billStatusLink": "https://www.govinfo.gov/bulkdata/BILLSTATUS/115/hr/BILLSTATUS-115hr4033.xml"
+    },
+    "branch": "legislative",
+    "pages": "3",
+    "governmentAuthor1": "Congress",
+    "governmentAuthor2": "Senate",
+    "suDocClassNumber": "Y 1.6:Y 1.4/6:",
+    "billType": "hr",
+    "congress": "115",
+    "originChamber": "HOUSE",
+    "currentChamber": "SENATE",
+    "session": "2",
+    "billNumber": "4033",
+    "billVersion": "rfs",
+    "isAppropriation": "false",
+    "isPrivate": "false",
+    "publisher": "U.S. Government Publishing Office",
+    "committees": [
+        {
+            "authorityId": "sseg00",
+            "chamber": "S",
+            "type": "S",
+            "committeeName": "Committee on Energy and Natural Resources"
+        }
+    ],
+    "otherIdentifier": {
+        "migrated-doc-id": "f:h4033_rfs.txt",
+        "parent-ils-system-id": "000501532",
+        "parent-ils-title": "Congressional bills",
+        "child-ils-system-id": "000325573",
+        "child-ils-title": "House bills",
+        "stock-number": "021-610-00252-9"
+    },
+    "references": [
+        {
+            "collectionCode": "USCODE",
+            "contents": [
+                {
+                    "title": "43",
+                    "label": "U.S.C",
+                    "sections": [
+                        "31b",
+                        "31c",
+                        "31d",
+                        "31h"
+                    ]
+                }
+            ],
+            "collectionName": "U.S. Code"
+        }
+    ],
+    "lastModified": "2018-11-16T00:33:00Z"
+}

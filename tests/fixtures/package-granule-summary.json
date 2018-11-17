@@ -1,0 +1,25 @@
+{
+    "title": "Daily Digest/House of Representatives",
+    "collectionCode": "CREC",
+    "collectionName": "Congressional Record",
+    "category": "Proceedings of Congress and General Congressional Publications",
+    "dateIssued": "2018-01-04",
+    "detailsLink": "https://www.govinfo.gov/app/details/CREC-2018-01-04/CREC-2018-01-04-pt1-PgD7-3",
+    "granulesLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules?offset=0&pageSize=100",
+    "packageId": "CREC-2018-01-04",
+    "packageLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/summary",
+    "granuleId": "CREC-2018-01-04-pt1-PgD7-3",
+    "download": {
+        "txtLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgD7-3/htm",
+        "pdfLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgD7-3/pdf",
+        "modsLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgD7-3/mods",
+        "premisLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/premis",
+        "zipLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/zip"
+    },
+    "bookNumber": "1",
+    "granuleClass": "DAILYDIGEST",
+    "subGranuleClass": "DDHCHAMBER",
+    "granuleDate": "2018-01-04",
+    "pagePrefix": "D",
+    "lastModified": "2018-07-31T12:43:00Z"
+}

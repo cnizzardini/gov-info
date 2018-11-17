@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="billres.xsl"?>
+<!DOCTYPE bill PUBLIC "-//US Congress//DTDs/bill.dtd//EN" "bill.dtd">
+<bill bill-stage="Referred-in-Senate" bill-type="olc" dms-id="H4DAB913074FB40439A929DF29E71957A" key="G" public-private="public" stage-count="1">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dublinCore>
+            <dc:title>115 HR 4033 : National Geologic Mapping Act Reauthorization Act</dc:title>
+            <dc:publisher>U.S. House of Representatives</dc:publisher>
+            <dc:date>2018-11-14</dc:date>
+            <dc:format>text/xml</dc:format>
+            <dc:language>EN</dc:language>
+            <dc:rights>Pursuant to Title 17 Section 105 of the United States Code, this file is not subject to copyright protection and is in the public domain.</dc:rights>
+        </dublinCore>
+    </metadata>
+    <form>
+        <distribution-code display="yes">IIB</distribution-code>
+        <congress display="yes">115th CONGRESS</congress>
+        <session display="yes">2d Session</session>
+        <legis-num display="yes">H. R. 4033</legis-num>
+        <current-chamber display="yes">IN THE SENATE OF THE UNITED STATES</current-chamber>
+        <action>
+            <action-date date="20181114">November 14, 2018</action-date>
+            <action-desc>Received; read twice and referred to the <committee-name committee-id="SSEG00">Committee on Energy and Natural Resources</committee-name></action-desc>
+        </action>
+        <legis-type>AN ACT</legis-type>
+        <official-title display="yes">To reauthorize the National Geologic Mapping Act of 1992.</official-title>
+    </form>
+    <legis-body id="HDC3E84D29697480288A4DAF080DAC8EB" style="OLC">
+        <section id="H1554171CF03D4AECAB6FA332056BDBC5" section-type="section-one">
+            <enum>1.</enum>
+            <header>Short title</header>
+            <text display-inline="no-display-inline">This Act may be cited as the <quote>
+                    <short-title>National Geologic Mapping Act Reauthorization Act</short-title>
+                </quote>.</text> 
+        </section>
+        <section id="H872251DE5F9046D5BCD1AA9B4022E74D">
+            <enum>2.</enum>
+            <header>Reauthorization of National Geologic Mapping Act of 1992</header> 
+            <subsection id="H9820461687D9408BA1384E13FEC2B8B4">
+                <enum>(a)</enum>
+                <header>Reauthorization</header> 
+                <paragraph id="H941DFC89FF7243D7A28C8CD026CCB732">
+                    <enum>(1)</enum>
+                    <header>In general</header>
+                    <text>Section 9(a) of the National Geologic Mapping Act of 1992 (<external-xref legal-doc="usc" parsable-cite="usc/43/31h">43 U.S.C. 31h(a)</external-xref>) is amended by striking <quote>2018</quote> and inserting <quote>2023</quote>.</text>
+                </paragraph>
+                <paragraph id="H6190B24DE94B4BD5B525144C84AFD6BD">
+                    <enum>(2)</enum>
+                    <header>Conforming amendment</header>
+                    <text>Section 4(b)(1) of the National Geologic Mapping Act of 1992 (<external-xref legal-doc="usc" parsable-cite="usc/43/31c">43 U.S.C. 31c(b)(1)</external-xref>) is amended by striking <quote>Omnibus Public Land Management Act of 2009</quote> each place it appears in subparagraphs (A) and (B) and inserting <quote>
+                            <short-title>National Geologic Mapping Act Reauthorization Act</short-title>
+                        </quote>.</text>
+                </paragraph>
+            </subsection>
+            <subsection id="HDA3265E229FB4CDC991316318B29B89B">
+                <enum>(b)</enum>
+                <header>Geologic mapping advisory committee</header>
+                <text>Section 5(a)(3) of the National Geologic Mapping Act of 1992 (<external-xref legal-doc="usc" parsable-cite="usc/43/31d">43 U.S.C. 31d(a)(3)</external-xref>) is amended by striking <quote>Associate Director for Geology</quote> and inserting <quote>Associate Director for Core Science Systems</quote>.</text>
+            </subsection>
+            <subsection id="HE905D145C4E040AFAEB69B153F98B191">
+                <enum>(c)</enum>
+                <header>Clerical amendments</header>
+                <text>Section 3 of the National Geologic Mapping Act of 1992 (<external-xref legal-doc="usc" parsable-cite="usc/43/31b">43 U.S.C. 31b</external-xref>) is amended—</text> 
+                <paragraph id="HBA96DD1B228241B4A80BD3B674820675">
+                    <enum>(1)</enum>
+                    <text>in paragraph (4), by striking <quote>section 6(d)(3)</quote> and inserting <quote>section 4(d)(3)</quote>;</text>
+                </paragraph>
+                <paragraph id="HC9A4AB4B23D84A3B8471720E40F2B88D">
+                    <enum>(2)</enum>
+                    <text>in paragraph (5), by striking <quote>section 6(d)(1)</quote> and inserting <quote>section 4(d)(1)</quote>; and</text> 
+                </paragraph>
+                <paragraph id="H7FE448617832472F923C14724D2EA672">
+                    <enum>(3)</enum>
+                    <text>in paragraph (9), by striking <quote>section 6(d)(2)</quote> and inserting <quote>section 4(d)(2)</quote>.</text>
+                </paragraph>
+            </subsection>
+        </section>
+    </legis-body>
+    <attestation>
+        <attestation-group>
+            <attestation-date chamber="House" date="20181113">Passed the House of Representatives November 13, 2018.</attestation-date>
+            <attestor display="yes">Karen L. Haas,</attestor>
+            <role>Clerk.</role>
+        </attestation-group>
+    </attestation>
+</bill>
+
+

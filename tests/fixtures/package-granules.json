@@ -1,0 +1,189 @@
+{
+    "count": 36,
+    "offset": 0,
+    "pageSize": 100,
+    "nextPage": null,
+    "previousPage": null,
+    "granules": [
+        {
+            "title": "Daily Digest/Senate",
+            "granuleId": "CREC-2018-01-04-pt1-PgD7",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgD7/summary"
+        },
+        {
+            "title": "Daily Digest/Senate Committee Meetings",
+            "granuleId": "CREC-2018-01-04-pt1-PgD7-2",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgD7-2/summary"
+        },
+        {
+            "title": "Daily Digest/House of Representatives",
+            "granuleId": "CREC-2018-01-04-pt1-PgD7-3",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgD7-3/summary"
+        },
+        {
+            "title": "Daily Digest/House Committee Meetings",
+            "granuleId": "CREC-2018-01-04-pt1-PgD7-4",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgD7-4/summary"
+        },
+        {
+            "title": "Daily Digest/COMMITTEE MEETINGS FOR 2018-01-05",
+            "granuleId": "CREC-2018-01-04-pt1-PgD7-5",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgD7-5/summary"
+        },
+        {
+            "title": "Daily Digest/Next Meeting of the SENATE + Next Meeting of the HOUSE OF REPRESENTATIVES + Other End Matter",
+            "granuleId": "CREC-2018-01-04-pt1-PgD7-6",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgD7-6/summary"
+        },
+        {
+            "title": "House of Representatives",
+            "granuleId": "CREC-2018-01-04-pt1-PgS-FrontMatter",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS-FrontMatter/summary"
+        },
+        {
+            "title": "House of Representatives",
+            "granuleId": "CREC-2018-01-04-pt1-PgS27-2",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS27-2/summary"
+        },
+        {
+            "title": "Senate",
+            "granuleId": "CREC-2018-01-04-pt1-PgS27-3",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS27-3/summary"
+        },
+        {
+            "title": "PRAYER",
+            "granuleId": "CREC-2018-01-04-pt1-PgS27-4",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS27-4/summary"
+        },
+        {
+            "title": "PLEDGE OF ALLEGIANCE",
+            "granuleId": "CREC-2018-01-04-pt1-PgS27-5",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS27-5/summary"
+        },
+        {
+            "title": "APPOINTMENT OF ACTING PRESIDENT PRO TEMPORE",
+            "granuleId": "CREC-2018-01-04-pt1-PgS27-6",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS27-6/summary"
+        },
+        {
+            "title": "RECOGNITION OF THE MAJORITY LEADER",
+            "granuleId": "CREC-2018-01-04-pt1-PgS27-7",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS27-7/summary"
+        },
+        {
+            "title": "FUNDING THE GOVERNMENT",
+            "granuleId": "CREC-2018-01-04-pt1-PgS27-8",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS27-8/summary"
+        },
+        {
+            "title": "MEASURE PLACED ON THE CALENDAR--H.R. 4667",
+            "granuleId": "CREC-2018-01-04-pt1-PgS28",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS28/summary"
+        },
+        {
+            "title": "RECOGNITION OF THE MINORITY LEADER",
+            "granuleId": "CREC-2018-01-04-pt1-PgS28-2",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS28-2/summary"
+        },
+        {
+            "title": "FUNDING THE GOVERNMENT",
+            "granuleId": "CREC-2018-01-04-pt1-PgS28-3",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS28-3/summary"
+        },
+        {
+            "title": "RESERVATION OF LEADER TIME",
+            "granuleId": "CREC-2018-01-04-pt1-PgS29",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS29/summary"
+        },
+        {
+            "title": "EXECUTIVE SESSION",
+            "granuleId": "CREC-2018-01-04-pt1-PgS29-2",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS29-2/summary"
+        },
+        {
+            "title": "RECESS",
+            "granuleId": "CREC-2018-01-04-pt1-PgS35",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS35/summary"
+        },
+        {
+            "title": "EXECUTIVE CALENDAR--Continued",
+            "granuleId": "CREC-2018-01-04-pt1-PgS35-2",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS35-2/summary"
+        },
+        {
+            "title": "LEGISLATIVE SESSION",
+            "granuleId": "CREC-2018-01-04-pt1-PgS44",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS44/summary"
+        },
+        {
+            "title": "ADDITIONAL STATEMENTS",
+            "granuleId": "CREC-2018-01-04-pt1-PgS44-2",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS44-2/summary"
+        },
+        {
+            "title": "TRIBUTE TO JUNE RYCHALSKI",
+            "granuleId": "CREC-2018-01-04-pt1-PgS44-3",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS44-3/summary"
+        },
+        {
+            "title": "TRIBUTE TO BARBARA JOHNSON",
+            "granuleId": "CREC-2018-01-04-pt1-PgS44-4",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS44-4/summary"
+        },
+        {
+            "title": "MEASURES PLACED ON THE CALENDAR",
+            "granuleId": "CREC-2018-01-04-pt1-PgS45",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS45/summary"
+        },
+        {
+            "title": "MEASURES REFERRED",
+            "granuleId": "CREC-2018-01-04-pt1-PgS45-2",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS45-2/summary"
+        },
+        {
+            "title": "ENROLLED BILL PRESENTED",
+            "granuleId": "CREC-2018-01-04-pt1-PgS45-3",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS45-3/summary"
+        },
+        {
+            "title": "EXECUTIVE AND OTHER COMMUNICATIONS",
+            "granuleId": "CREC-2018-01-04-pt1-PgS45-4",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS45-4/summary"
+        },
+        {
+            "title": "INTRODUCTION OF BILLS AND JOINT RESOLUTIONS",
+            "granuleId": "CREC-2018-01-04-pt1-PgS46",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS46/summary"
+        },
+        {
+            "title": "SUBMISSION OF CONCURRENT AND SENATE RESOLUTIONS",
+            "granuleId": "CREC-2018-01-04-pt1-PgS46-2",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS46-2/summary"
+        },
+        {
+            "title": "ADDITIONAL COSPONSORS",
+            "granuleId": "CREC-2018-01-04-pt1-PgS46-3",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS46-3/summary"
+        },
+        {
+            "title": "SUBMITTED RESOLUTIONS",
+            "granuleId": "CREC-2018-01-04-pt1-PgS47",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS47/summary"
+        },
+        {
+            "title": "SENATE RESOLUTION 368--SUPPORTING THE RIGHT OF ALL IRANIAN CITIZENS TO HAVE THEIR VOICES HEARD",
+            "granuleId": "CREC-2018-01-04-pt1-PgS47-2",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS47-2/summary"
+        },
+        {
+            "title": "ORDERS FOR MONDAY, JANUARY 8, 2018",
+            "granuleId": "CREC-2018-01-04-pt1-PgS47-3",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS47-3/summary"
+        },
+        {
+            "title": "ADJOURNMENT UNTIL MONDAY, JANUARY 8, 2018, AT 3 P.M.",
+            "granuleId": "CREC-2018-01-04-pt1-PgS48",
+            "granuleLink": "https://api.govinfo.gov/packages/CREC-2018-01-04/granules/CREC-2018-01-04-pt1-PgS48/summary"
+        }
+    ]
+}
