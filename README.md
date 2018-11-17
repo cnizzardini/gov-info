@@ -149,7 +149,7 @@ $package = new Package($api);
 $requestor = new PackageRequestor();
 $requestor->setStrPackageId('BILLS-115hr4033rfs')->setStrContentType('xml');
 
-$result = $package->contentType();
+$result = $package->contentType($requestor);
 ```
 
 After running this code `$result` will be an instance of GuzzleHttp\Psr7\Response
