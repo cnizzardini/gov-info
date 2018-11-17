@@ -15,7 +15,7 @@ class CollectionRequestor
     /**
      * 
      * @param string $strCollectionCode
-     * @return Cnizzardini\GovInfo\Requestor
+     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
      */
     public function setStrCollectionCode(string $strCollectionCode)
     {
@@ -26,7 +26,7 @@ class CollectionRequestor
     /**
      * 
      * @param \DateTime $objStartDate
-     * @return Cnizzardini\GovInfo\Requestor
+     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
      */
     public function setObjStartDate(\DateTime $objStartDate)
     {
@@ -37,7 +37,7 @@ class CollectionRequestor
     /**
      * 
      * @param \DateTime $objEndDate
-     * @return Cnizzardini\GovInfo\Requestor
+     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
      */
     public function setObjEndDate(\DateTime $objEndDate)
     {
@@ -48,7 +48,7 @@ class CollectionRequestor
     /**
      * 
      * @param int $intPageSize
-     * @return Cnizzardini\GovInfo\Requestor
+     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
      * @throws \LogicException
      */
     public function setIntPageSize(int $intPageSize)
@@ -64,7 +64,7 @@ class CollectionRequestor
     /**
      * 
      * @param int $intOffSet
-     * @return Cnizzardini\GovInfo\Requestor
+     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
      * @throws \LogicException
      */
     public function setIntOffSet(int $intOffSet)
@@ -80,7 +80,7 @@ class CollectionRequestor
     /**
      * 
      * @param string $strDocClass
-     * @return Cnizzardini\GovInfo\Requestor
+     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
      */
     public function setStrDocClass(string $strDocClass)
     {
@@ -91,7 +91,7 @@ class CollectionRequestor
     /**
      * 
      * @param string $strTitle
-     * @return Cnizzardini\GovInfo\Requestor
+     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
      */
     public function setStrTitle(string $strTitle)
     {
@@ -102,7 +102,7 @@ class CollectionRequestor
     /**
      * 
      * @param string $strPackageId
-     * @return Cnizzardini\GovInfo\Requestor
+     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
      */
     public function setStrPackageId(string $strPackageId)
     {
