@@ -1,4 +1,5 @@
 <?php
+
 namespace Cnizzardini\GovInfo\Requestor;
 
 class Requestor

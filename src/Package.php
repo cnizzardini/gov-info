@@ -1,6 +1,7 @@
 <?php
 
 namespace Cnizzardini\GovInfo;
+
 use GuzzleHttp\Psr7\Uri;
 
 class Package
