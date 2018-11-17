@@ -49,7 +49,7 @@ use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
 
 $requestor = new CollectionRequestor();
 
-$result = $collection->item($$requestor->setStrCollectionCode('BILLS'));
+$result = $collection->item($requestor->setStrCollectionCode('BILLS'));
 
 ```
 
