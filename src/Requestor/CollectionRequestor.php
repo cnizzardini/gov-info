@@ -8,7 +8,9 @@ class CollectionRequestor
             $objEndDate = null,
             $intPageSize = 100,
             $intOffSet = 0,
-            $strDocClass = '';
+            $strDocClass = '',
+            $strTitle = '',
+            $strPackageId = '';
     
     /**
      * 
@@ -78,12 +80,35 @@ class CollectionRequestor
     /**
      * 
      * @param string $strDocClass
+     * @return Cnizzardini\GovInfo\Requestor
      */
     public function setStrDocClass(string $strDocClass)
     {
         $this->strDocClass = $strDocClass;
         return $this;
     }
+    
+    /**
+     * 
+     * @param string $strTitle
+     * @return Cnizzardini\GovInfo\Requestor
+     */
+    public function setTitle(string $strTitle)
+    {
+        $this->strTitle = $strTitle;
+        return $this;
+    }
+    
+    /**
+     * 
+     * @param string $strPackageId
+     * @return Cnizzardini\GovInfo\Requestor
+     */
+    public function setStrPackageId(string $strPackageId)
+    {
+        $this->strPackageId = $strPackageId;
+        return $this;
+    }    
     
     /**
      * 
@@ -137,5 +162,23 @@ class CollectionRequestor
     public function getStrDocClass()
     {
         return $this->strDocClass;
-    }   
+    }
+    
+    /**
+     * 
+     * @return string
+     */
+    public function getStrTitle()
+    {
+        return $this->strTitle;
+    }
+    
+    /**
+     * 
+     * @return string
+     */
+    public function getStrPackageId()
+    {
+        return $this->strPackageId;
+    } 
 }
