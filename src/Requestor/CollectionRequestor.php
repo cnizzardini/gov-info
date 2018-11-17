@@ -3,10 +3,21 @@ namespace Cnizzardini\GovInfo\Requestor;
 
 class CollectionRequestor
 {
-    private $objStartDate = null,
+    private $strCollectionCode = '',
+            $objStartDate = null,
             $objEndDate = null,
             $intPageSize = 100,
-            $intOffSet = 0;
+            $intOffSet = 0,
+            $strDocClass = '';
+    
+    /**
+     * 
+     * @param string $strCollectionCode
+     */
+    public function setStrCollectionCode(string $strCollectionCode)
+    {
+        $this->strCollectionCode = $strCollectionCode;
+    }
     
     /**
      * 
@@ -56,6 +67,24 @@ class CollectionRequestor
     
     /**
      * 
+     * @param string $strDocClass
+     */
+    public function setStrDocClass(string $strDocClass)
+    {
+        $this->strDocClass = $strDocClass;
+    }
+    
+    /**
+     * 
+     * @return string
+     */
+    public function getStrCollectionCode()
+    {
+        return $this->strCollectionCode;
+    }
+    
+    /**
+     * 
      * @return \DateTime|null
      */
     public function getObjStartDate()
@@ -89,4 +118,13 @@ class CollectionRequestor
     {
         return $this->intOffSet;
     }
+    
+    /**
+     * 
+     * @return string
+     */
+    public function getStrDocClass()
+    {
+        return $this->strDocClass;
+    }   
 }
