@@ -91,6 +91,13 @@ class Package
         return $objResult;
     }
     
+    /**
+     * Get granule summary
+     * 
+     * @param \Cnizzardini\GovInfo\Requestor\PackageRequestor $objRequestor
+     * @return \stdClass
+     * @throws \LogicException
+     */
     public function granuleSummary(\Cnizzardini\GovInfo\Requestor\PackageRequestor $objRequestor) : \stdClass
     {
         if (empty($objRequestor->getStrPackageId())) {
