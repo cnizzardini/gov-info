@@ -2,134 +2,76 @@
 
 namespace Cnizzardini\GovInfo\Requestor;
 
-use Cnizzardini\GovInfo\Requestor\Requestor;
-
-class CollectionRequestor extends Requestor
+final class CollectionRequestor extends Requestor
 {
     private $strCollectionCode = '',
             $objStartDate = null,
             $objEndDate = null,
-            $intPageSize = 100,
-            $intOffSet = 0,
             $strDocClass = '',
             $strTitle = '',
             $strPackageId = '';
-    
-    /**
-     * 
-     * @param string $strCollectionCode
-     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
-     */
-    public function setStrCollectionCode(string $strCollectionCode)
+
+    public function setStrCollectionCode(string $strCollectionCode) : self
     {
         $this->strCollectionCode = $strCollectionCode;
         return $this;
     }
-    
-    /**
-     * 
-     * @param \DateTime $objStartDate
-     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
-     */
-    public function setObjStartDate(\DateTime $objStartDate)
+
+    public function setObjStartDate(\DateTime $objStartDate) : self
     {
         $this->objStartDate = $objStartDate;
         return $this;
     }
-    
-    /**
-     * 
-     * @param \DateTime $objEndDate
-     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
-     */
-    public function setObjEndDate(\DateTime $objEndDate)
+
+    public function setObjEndDate(\DateTime $objEndDate) : self
     {
         $this->objEndDate = $objEndDate;
         return $this;
     }
-    
-    /**
-     * 
-     * @param string $strDocClass
-     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
-     */
-    public function setStrDocClass(string $strDocClass)
+
+    public function setStrDocClass(string $strDocClass) : self
     {
         $this->strDocClass = $strDocClass;
         return $this;
     }
-    
-    /**
-     * 
-     * @param string $strTitle
-     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
-     */
-    public function setStrTitle(string $strTitle)
+
+    public function setStrTitle(string $strTitle) : self
     {
         $this->strTitle = $strTitle;
         return $this;
     }
-    
-    /**
-     * 
-     * @param string $strPackageId
-     * @return Cnizzardini\GovInfo\Requestor\CollectionRequestor
-     */
-    public function setStrPackageId(string $strPackageId)
+
+    public function setStrPackageId(string $strPackageId) : self
     {
         $this->strPackageId = $strPackageId;
         return $this;
     }    
-    
-    /**
-     * 
-     * @return string
-     */
+
     public function getStrCollectionCode()
     {
         return $this->strCollectionCode;
     }
-    
-    /**
-     * 
-     * @return \DateTime|null
-     */
+
     public function getObjStartDate()
     {
         return $this->objStartDate;
     }
-    
-    /**
-     * 
-     * @return \DateTime|null
-     */
+
     public function getObjEndDate()
     {
         return $this->objEndDate;
     }
-    
-    /**
-     * 
-     * @return string
-     */
+
     public function getStrDocClass()
     {
         return $this->strDocClass;
     }
-    
-    /**
-     * 
-     * @return string
-     */
+
     public function getStrTitle()
     {
         return $this->strTitle;
     }
-    
-    /**
-     * 
-     * @return string
-     */
+
     public function getStrPackageId()
     {
         return $this->strPackageId;
