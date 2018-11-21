@@ -4,7 +4,7 @@ namespace Cnizzardini\GovInfo;
 
 use GuzzleHttp\Psr7\Uri;
 
-class Collection
+final class Collection
 {
     const ENDPOINT = 'collections';
     
@@ -32,7 +32,7 @@ class Collection
     /**
      * Returns a type of collection
      * 
-     * @param \Cnizzardini\GovInfo\Requestor\Collection $objRequestor
+     * @param \Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor
      * @return \stdClass
      */
     public function item(\Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor) : \stdClass

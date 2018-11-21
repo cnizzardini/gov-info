@@ -4,7 +4,7 @@ namespace Cnizzardini\GovInfo;
 
 use GuzzleHttp\Psr7\Uri;
 
-class Package
+final class Package
 {
     const ENDPOINT = 'packages';
     

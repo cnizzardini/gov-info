@@ -2,7 +2,7 @@
 
 namespace Cnizzardini\GovInfo;
 
-class Api
+final class Api
 {
     const URL = 'api.govinfo.gov';
     private $objHttp;
@@ -34,7 +34,7 @@ class Api
         
         $objUri = $objUri->withHost(self::URL)->withScheme('https');
         $objUri = $objUri->withQueryValue($objUri, 'api_key', $this->strApiKey);
-        
+
         return $this->objHttp->get($objUri);
     }
     
