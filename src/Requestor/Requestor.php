@@ -2,7 +2,7 @@
 
 namespace Cnizzardini\GovInfo\Requestor;
 
-class Requestor
+abstract class Requestor
 {
     private $intPageSize = 100,
             $intOffSet = 0;
