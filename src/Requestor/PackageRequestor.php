@@ -2,67 +2,40 @@
 
 namespace Cnizzardini\GovInfo\Requestor;
 
-use Cnizzardini\GovInfo\Requestor\Requestor;
-
-class PackageRequestor extends Requestor
+final class PackageRequestor extends Requestor
 {
     private $strPackageId = '',
             $strGranuleId = '',
             $strContentType = '';
 
-    /**
-     * 
-     * @param string $strPackageId
-     * @return Cnizzardini\GovInfo\Requestor\PackageRequestor
-     */
-    public function setStrPackageId(string $strPackageId) 
+    public function setStrPackageId(string $strPackageId) : self
     {
         $this->strPackageId = $strPackageId;
         return $this;
     }
 
-    /**
-     * 
-     * @param string $strGranuleId
-     * @return Cnizzardini\GovInfo\Requestor\PackageRequestor
-     */
-    public function setStrGranuleId(string $strGranuleId) {
+    public function setStrGranuleId(string $strGranuleId) : self
+    {
         $this->strGranuleId = $strGranuleId;
         return $this;
     }
-    
-    /**
-     * 
-     * @param string $strContentType
-     * @return Cnizzardini\GovInfo\Requestor\PackageRequestor
-     */
-    public function setStrContentType(string $strContentType) {
+
+    public function setStrContentType(string $strContentType) : self
+    {
         $this->strContentType = $strContentType;
         return $this;
     }
-    
-    /**
-     * 
-     * @return string
-     */
+
     public function getStrPackageId() 
     {
         return $this->strPackageId;
     }
 
-    /**
-     * 
-     * @return string
-     */    
     public function getStrGranuleId() 
     {
         return $this->strGranuleId;
     }
 
-    /**
-     * 
-     * @return string
-     */
     public function getStrContentType() 
     {
         return $this->strContentType;
