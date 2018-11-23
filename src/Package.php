@@ -14,7 +14,7 @@ final class Package
      * 
      * @param \Cnizzardini\GovInfo\Api $objApi
      */
-    public function __construct(\Cnizzardini\GovInfo\Api $objApi)
+    public function __construct(Api $objApi)
     {
         $this->objApi = $objApi;
     }
