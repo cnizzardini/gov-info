@@ -28,7 +28,7 @@ $result = $collection->index();
 After running this code `$result` will contain a non-truncated version of collections:
 
 ```
-array
+Array
 (
     [collections] => Array
         [
