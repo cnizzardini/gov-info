@@ -80,9 +80,12 @@ Array
 Retrieve a specific package in a collection. 
 
 ```php
-$requestor->setStrCollectionCode('BILLS')->setObjStartDate(new \DateTime('2018-01-01 12:00:00'))
-    ->setObjEndDate(new \DateTime('2018-02-01 12:00:00'))->setStrDocClass('hr')
-    ->setStrPackageId('BILLS-115hr4033rfs')->setStrTitle('Geologic Mapping Act');
+$requestor->setStrCollectionCode('BILLS')
+    ->setObjStartDate(new \DateTime('2018-01-01 12:00:00'))
+    ->setObjEndDate(new \DateTime('2018-02-01 12:00:00'))
+    ->setStrDocClass('hr')
+    ->setStrPackageId('BILLS-115hr4033rfs')
+    ->setStrTitle('Geologic Mapping Act');
 
 $result = $collection->item($requestor);
 ```
