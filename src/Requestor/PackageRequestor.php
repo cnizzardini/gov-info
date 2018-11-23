@@ -26,17 +26,17 @@ final class PackageRequestor extends Requestor
         return $this;
     }
 
-    public function getStrPackageId() 
+    public function getStrPackageId() : string
     {
         return $this->strPackageId;
     }
 
-    public function getStrGranuleId() 
+    public function getStrGranuleId() : string
     {
         return $this->strGranuleId;
     }
 
-    public function getStrContentType() 
+    public function getStrContentType() : string
     {
         return $this->strContentType;
     } 

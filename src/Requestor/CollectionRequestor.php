@@ -47,7 +47,7 @@ final class CollectionRequestor extends Requestor
         return $this;
     }    
 
-    public function getStrCollectionCode()
+    public function getStrCollectionCode() : string
     {
         return $this->strCollectionCode;
     }
@@ -62,17 +62,17 @@ final class CollectionRequestor extends Requestor
         return $this->objEndDate;
     }
 
-    public function getStrDocClass()
+    public function getStrDocClass() : string
     {
         return $this->strDocClass;
     }
 
-    public function getStrTitle()
+    public function getStrTitle() : string
     {
         return $this->strTitle;
     }
 
-    public function getStrPackageId()
+    public function getStrPackageId() : string
     {
         return $this->strPackageId;
     } 
