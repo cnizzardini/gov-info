@@ -28,17 +28,17 @@ $result = $collection->index();
 After running this code `$result` will contain a non-truncated version of collections:
 
 ```
-stdClass Object
+array
 (
     [collections] => Array
-        (
-            [0] => stdClass Object
-                (
+        [
+            [0] => Array
+                [
                     [collectionCode] => USCOURTS
                     [collectionName] => United States Courts Opinions
                     [packageCount] => 1134933
                     [granuleCount] => 2525240
-                )
+                ]
         ...
 )
 
@@ -58,22 +58,22 @@ $result = $collection->item($requestor->setStrCollectionCode('BILLS'));
 After running this code `$result` will contain a non-truncated version of packages:
 
 ```
-stdClass Object
+Array
 (
     [count] => 202767
     [message] => 
     [nextPage] => https://api.govinfo.gov/collections/BILLS/2018-01-01T00:00:00Z/?offset=100&pageSize=100
     [previousPage] => 
     [packages] => Array
-        (
-            [0] => stdClass Object
-                (
+        [
+            [0] => Array
+                [
                     [packageId] => BILLS-115hr2740rfs
                     [lastModified] => 2018-11-16T00:33:17Z
                     [packageLink] => https://api.govinfo.gov/packages/BILLS-115hr2740rfs/summary
                     [docClass] => hr
                     [title] => Rabbi Michoel Ber Weissmandl Congressional Gold Medal Act of 2017
-                )
+                ]
         ...
 ```
 
@@ -90,23 +90,23 @@ $result = $collection->item($requestor);
 After running this code `$result` will contain the requested package
 
 ```
-stdClass Object
+Array
 (
     [count] => 202767
     [message] => 
     [nextPage] => https://api.govinfo.gov/collections/BILLS/2018-01-01T00:00:00Z/?offset=100&pageSize=100
     [previousPage] => 
     [packages] => Array
-        (
-            [2] => stdClass Object
-                (
+        [
+            [2] => Array
+                [
                     [packageId] => BILLS-115hr4033rfs
                     [lastModified] => 2018-11-16T00:33:00Z
                     [packageLink] => https://api.govinfo.gov/packages/BILLS-115hr4033rfs/summary
                     [docClass] => hr
                     [title] => National Geologic Mapping Act Reauthorization Act
-                )
-        )
+                ]
+        ]
 )
 ```
 
@@ -126,18 +126,18 @@ $result = $package->summary($requestor->setStrPackageId('BILLS-115hr4033rfs'));
 After running this code `$result` will contain a non-truncated version of the package summary
 
 ```
-stdClass Object
+Array
 (
     [title] => An Act To reauthorize the National Geologic Mapping Act of 1992.
     [shortTitle] => Array
-        (
-            [0] => stdClass Object
-                (
+        [
+            [0] => Array
+                [
                     [type] => measure
                     [title] => National Geologic Mapping Act Reauthorization Act
-                )
+                ]
 
-        )
+        ]
     ...
 ```
 
