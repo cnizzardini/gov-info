@@ -2,19 +2,22 @@
 
 namespace Cnizzardini\GovInfo;
 
+use \GuzzleHttp\Psr7\Uri;
+use \GuzzleHttp\Client;
+
 final class Api
 {
-    const URL = 'api.govinfo.gov';
+    private const URL = 'api.govinfo.gov';
     private $objHttp;
     private $strApiKey;
     
     /**
      * Construct an instance
      * 
-     * @param \GuzzleHttp\Client $objHttp
+     * @param Client $objHttp
      * @param string $strApiKey
      */
-    public function __construct(\GuzzleHttp\Client $objHttp, string $strApiKey)
+    public function __construct(Client $objHttp, string $strApiKey)
     {
         $this->objHttp = $objHttp;
         $this->strApiKey = $strApiKey;
@@ -23,10 +26,10 @@ final class Api
     /**
      * HTTP GET
      * 
-     * @param \GuzzleHttp\Psr7\Uri $objUri
+     * @param Uri $objUri
      * @return \GuzzleHttp\Psr7\Response
      */
-    public function get(\GuzzleHttp\Psr7\Uri $objUri) : \GuzzleHttp\Psr7\Response
+    public function get(Uri $objUri) : \GuzzleHttp\Psr7\Response
     {
         if (empty($objUri->getPath())) {
             throw new \LogicException('Uri must contain a valid path');
@@ -41,13 +44,13 @@ final class Api
     /**
      * Performs HTTP GET and returns as an object
      * 
-     * @param \GuzzleHttp\Psr7\Uri $objUri
-     * @return \stdClass
+     * @param Uri $objUri
+     * @return array
      */
-    public function getObject(\GuzzleHttp\Psr7\Uri $objUri) : \stdClass
+    public function getArray(Uri $objUri) : array
     {
         $objResponse = $this->get($objUri);
-        return json_decode($objResponse->getBody()->getContents());
+        return json_decode($objResponse->getBody()->getContents(), true);
     }
     
     /**
@@ -55,7 +58,7 @@ final class Api
      * 
      * @return \GuzzleHttp\Client
      */
-    public function getObjHttp() : \GuzzleHttp\Client
+    public function getObjHttp() : Client
     {
         return $this->objHttp;
     }

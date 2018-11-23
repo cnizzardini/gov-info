@@ -25,9 +25,9 @@ class PackageTest extends TestCase
         $objRequestor->setStrPackageId('BILLS-115hr4033rfs');
         
         $objPackage = new Package($objApi);
-        $objResult = $objPackage->summary($objRequestor);
+        $arrResult = $objPackage->summary($objRequestor);
         
-        $this->assertEquals('BILLS-115hr4033rfs', $objResult->packageId);
+        $this->assertEquals('BILLS-115hr4033rfs', $arrResult['packageId']);
     }
     
     public function testContentTypeXml()
@@ -65,10 +65,10 @@ class PackageTest extends TestCase
         $objRequestor->setStrPackageId('CREC-2018-01-04');
         
         $objPackage = new Package($objApi);
-        $objResult = $objPackage->granules($objRequestor);
-        $objGranule = reset($objResult->granules);
+        $arrResult = $objPackage->granules($objRequestor);
+        $arrGranule = reset($arrResult['granules']);
         
-        $this->assertEquals('CREC-2018-01-04-pt1-PgD7', $objGranule->granuleId);
+        $this->assertEquals('CREC-2018-01-04-pt1-PgD7', $arrGranule['granuleId']);
     }
     
     public function testGranuleSummary()
@@ -85,8 +85,8 @@ class PackageTest extends TestCase
         $objRequestor->setStrGranuleId('CREC-2018-01-04-pt1-PgD7-3');
         
         $objPackage = new Package($objApi);
-        $objResult = $objPackage->granuleSummary($objRequestor);
+        $arrResult = $objPackage->granuleSummary($objRequestor);
         
-        $this->assertEquals('CREC-2018-01-04-pt1-PgD7-3', $objResult->granuleId);
+        $this->assertEquals('CREC-2018-01-04-pt1-PgD7-3', $arrResult['granuleId']);
     }
 }

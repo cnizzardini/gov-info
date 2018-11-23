@@ -7,12 +7,12 @@ use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
 
 final class Collection
 {
-    const ENDPOINT = 'collections';
+    private const ENDPOINT = 'collections';
     
     /**
      * Constructs an instance
      * 
-     * @param \Cnizzardini\GovInfo\Api $objApi
+     * @param Api $objApi
      */
     public function __construct(Api $objApi)
     {
@@ -22,21 +22,21 @@ final class Collection
     /**
      * Returns collections available
      * 
-     * @return \stdClass
+     * @return array
      */
-    public function index() : \stdClass
+    public function index() : array
     {
         $objUri = new Uri();
-        return $this->objApi->getObject($objUri->withPath(self::ENDPOINT));
+        return $this->objApi->getArray($objUri->withPath(self::ENDPOINT));
     }
-    
+
     /**
      * Returns a type of collection
-     * 
-     * @param \Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor
-     * @return \stdClass
+     *
+     * @param CollectionRequestor $objRequestor
+     * @return array
      */
-    public function item(CollectionRequestor $objRequestor) : \stdClass
+    public function item(CollectionRequestor $objRequestor) : array
     {
         if (empty($objRequestor->getStrCollectionCode())) {
             throw new \LogicException('CollectionRequestor::strCollectionCode is required');
@@ -56,48 +56,48 @@ final class Collection
             $strPath.= '/' . urlencode($objRequestor->getObjEndDate()->format('Y-m-d H:i:s'));
         }
         
-        $objResult = $this->objApi->getObject($objUri->withPath($strPath));
+        $objResult = $this->objApi->getArray($objUri->withPath($strPath));
         
         return $this->filterPackages($objResult, $objRequestor);
     }
-    
+
     /**
      * Filters packages
-     * 
-     * @param \stdClass $objResult
-     * @param \Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor
-     * @return \stdClass
+     *
+     * @param array $arrResult
+     * @param CollectionRequestor $objRequestor
+     * @return array
      */
-    private function filterPackages(\stdClass $objResult, CollectionRequestor $objRequestor) : \stdClass
+    private function filterPackages(array $arrResult, CollectionRequestor $objRequestor) : array
     {
         $strDocClass = $objRequestor->getStrDocClass();
         $strTitle = $objRequestor->getStrTitle();
         $strPackageId = $objRequestor->getStrPackageId();
         
         if (!empty($strDocClass)) {
-            $objResult->packages = array_filter($objResult->packages, function($objPackage) use ($strDocClass) {
-                if ($objPackage->docClass == $strDocClass) {
-                    return $objPackage;
+            $arrResult['packages'] = array_filter($arrResult['packages'], function($arrPackage) use ($strDocClass) {
+                if ($arrPackage['docClass'] == $strDocClass) {
+                    return $arrPackage;
                 }
             });
         }
         
         if (!empty($strTitle)) {
-            $objResult->packages = array_filter($objResult->packages, function($objPackage) use ($strTitle) {
-                if (preg_match("/$strTitle/i", $objPackage->title)) {
-                    return $objPackage;
+            $arrResult['packages'] = array_filter($arrResult['packages'], function($arrResult) use ($strTitle) {
+                if (preg_match("/$strTitle/i", $arrResult['title'])) {
+                    return $arrResult;
                 }
             });
         }
         
         if (!empty($strPackageId)) {
-            $objResult->packages = array_filter($objResult->packages, function($objPackage) use ($strPackageId) {
-                if ($objPackage->packageId == $strPackageId) {
-                    return $objPackage;
+            $arrResult['packages'] = array_filter($arrResult['packages'], function($arrResult) use ($strPackageId) {
+                if ($arrResult['packageId'] == $strPackageId) {
+                    return $arrResult;
                 }
             });
         }
         
-        return $objResult;
+        return $arrResult;
     }
 }

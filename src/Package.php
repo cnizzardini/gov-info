@@ -7,12 +7,12 @@ use Cnizzardini\GovInfo\Requestor\PackageRequestor;
 
 final class Package
 {
-    const ENDPOINT = 'packages';
+    private const ENDPOINT = 'packages';
     
     /**
      * Constructs an instance
      * 
-     * @param \Cnizzardini\GovInfo\Api $objApi
+     * @param Api $objApi
      */
     public function __construct(Api $objApi)
     {
@@ -22,11 +22,11 @@ final class Package
     /**
      * Gets package summary
      * 
-     * @param \Cnizzardini\GovInfo\Requestor\PackageRequestor $objRequestor
-     * @return \stdClass
+     * @param PackageRequestor $objRequestor
+     * @return array
      * @throws \LogicException
      */
-    public function summary(PackageRequestor $objRequestor) : \stdClass
+    public function summary(PackageRequestor $objRequestor) : array
     {
         if (empty($objRequestor->getStrPackageId())) {
             throw new \LogicException('PackageRequestor::strCollectionCode is required');
@@ -38,15 +38,13 @@ final class Package
         
         $strPath = self::ENDPOINT . '/' . $objRequestor->getStrPackageId() . '/summary';
         
-        $objResult = $this->objApi->getObject($objUri->withPath($strPath));
-        
-        return $objResult;
+        return $this->objApi->getArray($objUri->withPath($strPath));
     }
     
     /**
      * Gets a package of a specified content type
      * 
-     * @param \Cnizzardini\GovInfo\Requestor\PackageRequestor $objRequestor
+     * @param PackageRequestor $objRequestor
      * @return \GuzzleHttp\Psr7\Response
      * @throws \LogicException
      */
@@ -71,11 +69,11 @@ final class Package
     /**
      * Gets a packages granules
      * 
-     * @param \Cnizzardini\GovInfo\Requestor\PackageRequestor $objRequestor
+     * @param PackageRequestor $objRequestor
      * @return \stdClass
      * @throws \LogicException
      */
-    public function granules(PackageRequestor $objRequestor) : \stdClass
+    public function granules(PackageRequestor $objRequestor) : array
     {
         if (empty($objRequestor->getStrPackageId())) {
             throw new \LogicException('PackageRequestor::strCollectionCode is required');
@@ -86,20 +84,18 @@ final class Package
         $objUri = $objUri->withQueryValue($objUri, 'offset', $objRequestor->getIntOffSet());
         
         $strPath = self::ENDPOINT . '/' . $objRequestor->getStrPackageId() . '/granules';
-        
-        $objResult = $this->objApi->getObject($objUri->withPath($strPath));
-        
-        return $objResult;
+
+        return $this->objApi->getArray($objUri->withPath($strPath));
     }
     
     /**
      * Get granule summary
      * 
      * @param \Cnizzardini\GovInfo\Requestor\PackageRequestor $objRequestor
-     * @return \stdClass
+     * @return array
      * @throws \LogicException
      */
-    public function granuleSummary(PackageRequestor $objRequestor) : \stdClass
+    public function granuleSummary(PackageRequestor $objRequestor) : array
     {
         if (empty($objRequestor->getStrPackageId())) {
             throw new \LogicException('PackageRequestor::strCollectionCode is required');
@@ -116,8 +112,6 @@ final class Package
         $strPath = self::ENDPOINT . '/' . $objRequestor->getStrPackageId() . '/granules/';
         $strPath.= $objRequestor->getStrGranuleId() . '/summary';
         
-        $objResult = $this->objApi->getObject($objUri->withPath($strPath));
-        
-        return $objResult;
+        return $this->objApi->getArray($objUri->withPath($strPath));
     }
 }

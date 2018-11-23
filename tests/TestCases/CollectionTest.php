@@ -22,10 +22,10 @@ class CollectionTest extends TestCase
         
         $objApi = new Api($objClient, self::KEY);
         $objCollection = new Collection($objApi);
-        $objResult = $objCollection->index();
-        $objItem = reset($objResult->collections);
+        $arrResult = $objCollection->index();
+        $arrItem = reset($arrResult['collections']);
         
-        $this->assertEquals('USCOURTS', $objItem->collectionCode);
+        $this->assertEquals('USCOURTS', $arrItem['collectionCode']);
     }
     
     public function testItem()
@@ -40,9 +40,9 @@ class CollectionTest extends TestCase
         $objCollection = new Collection($objApi);
         $objRequestor = new CollectionRequestor();
         
-        $objResult = $objCollection->item($objRequestor->setStrCollectionCode('BILLS'));
-        $objItem = reset($objResult->packages);
-        $this->assertEquals('BILLS-115hr2740rfs', $objItem->packageId);
+        $arrResult = $objCollection->item($objRequestor->setStrCollectionCode('BILLS'));
+        $arrItem = reset($arrResult['packages']);
+        $this->assertEquals('BILLS-115hr2740rfs', $arrItem['packageId']);
     }
     
     public function testItemWithDates()
@@ -60,9 +60,9 @@ class CollectionTest extends TestCase
             ->setObjEndDate(new \DateTime('2018-02-01 12:00:00'))->setStrDocClass('hr')
             ->setStrPackageId('BILLS-115hr4033rfs')->setStrTitle('Geologic Mapping Act');
         
-        $objResult = $objCollection->item($objRequestor);
+        $arrResult = $objCollection->item($objRequestor);
         
-        $objItem = reset($objResult->packages);
-        $this->assertEquals('BILLS-115hr4033rfs', $objItem->packageId);
+        $arrItem = reset($arrResult['packages']);
+        $this->assertEquals('BILLS-115hr4033rfs', $arrItem['packageId']);
     }    
 }
