@@ -3,6 +3,7 @@
 namespace Cnizzardini\GovInfo;
 
 use GuzzleHttp\Psr7\Uri;
+use Cnizzardini\GovInfo\Requestor\PackageRequestor;
 
 final class Package
 {
@@ -25,7 +26,7 @@ final class Package
      * @return \stdClass
      * @throws \LogicException
      */
-    public function summary(\Cnizzardini\GovInfo\Requestor\PackageRequestor $objRequestor) : \stdClass
+    public function summary(PackageRequestor $objRequestor) : \stdClass
     {
         if (empty($objRequestor->getStrPackageId())) {
             throw new \LogicException('PackageRequestor::strCollectionCode is required');
@@ -49,7 +50,7 @@ final class Package
      * @return \GuzzleHttp\Psr7\Response
      * @throws \LogicException
      */
-    public function contentType(\Cnizzardini\GovInfo\Requestor\PackageRequestor $objRequestor) : \GuzzleHttp\Psr7\Response
+    public function contentType(PackageRequestor $objRequestor) : \GuzzleHttp\Psr7\Response
     {
         if (empty($objRequestor->getStrPackageId())) {
             throw new \LogicException('PackageRequestor::strCollectionCode is required');
@@ -74,7 +75,7 @@ final class Package
      * @return \stdClass
      * @throws \LogicException
      */
-    public function granules(\Cnizzardini\GovInfo\Requestor\PackageRequestor $objRequestor) : \stdClass
+    public function granules(PackageRequestor $objRequestor) : \stdClass
     {
         if (empty($objRequestor->getStrPackageId())) {
             throw new \LogicException('PackageRequestor::strCollectionCode is required');
@@ -98,7 +99,7 @@ final class Package
      * @return \stdClass
      * @throws \LogicException
      */
-    public function granuleSummary(\Cnizzardini\GovInfo\Requestor\PackageRequestor $objRequestor) : \stdClass
+    public function granuleSummary(PackageRequestor $objRequestor) : \stdClass
     {
         if (empty($objRequestor->getStrPackageId())) {
             throw new \LogicException('PackageRequestor::strCollectionCode is required');

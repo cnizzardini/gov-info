@@ -3,6 +3,7 @@
 namespace Cnizzardini\GovInfo;
 
 use GuzzleHttp\Psr7\Uri;
+use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
 
 final class Collection
 {
@@ -35,7 +36,7 @@ final class Collection
      * @param \Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor
      * @return \stdClass
      */
-    public function item(\Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor) : \stdClass
+    public function item(CollectionRequestor $objRequestor) : \stdClass
     {
         if (empty($objRequestor->getStrCollectionCode())) {
             throw new \LogicException('CollectionRequestor::strCollectionCode is required');
@@ -67,7 +68,7 @@ final class Collection
      * @param \Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor
      * @return \stdClass
      */
-    private function filterPackages(\stdClass $objResult, \Cnizzardini\GovInfo\Requestor\CollectionRequestor $objRequestor) : \stdClass
+    private function filterPackages(\stdClass $objResult, CollectionRequestor $objRequestor) : \stdClass
     {
         $strDocClass = $objRequestor->getStrDocClass();
         $strTitle = $objRequestor->getStrTitle();
