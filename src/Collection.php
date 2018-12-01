@@ -47,13 +47,15 @@ final class Collection
         $objUri = $objUri->withQueryValue($objUri, 'offset', $objRequestor->getIntOffSet());
         
         $strPath = self::ENDPOINT . '/' . $objRequestor->getStrCollectionCode();
-        
+
         if ($objRequestor->getObjStartDate()) {
-            $strPath.= '/' . urlencode($objRequestor->getObjStartDate()->format('Y-m-d H:i:s'));
+            $strPath.= '/' . urlencode($objRequestor->getObjStartDate()->format('Y-m-d')) . 'T';
+            $strPath.= urlencode($objRequestor->getObjStartDate()->format('H:i:s')) . 'Z';
         }
-        
+
         if ($objRequestor->getObjEndDate()) {
-            $strPath.= '/' . urlencode($objRequestor->getObjEndDate()->format('Y-m-d H:i:s'));
+            $strPath.= '/' . urlencode($objRequestor->getObjEndDate()->format('Y-m-d')) . 'T';
+            $strPath.= urlencode($objRequestor->getObjEndDate()->format('H:i:s')) . 'Z';
         }
         
         $objResult = $this->objApi->getArray($objUri->withPath($strPath));
