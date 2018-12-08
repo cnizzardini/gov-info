@@ -47,8 +47,12 @@ Array
 Retrieve all packages in a collection
 
 ```php
+use Cnizzardini\GovInfo\Api;
+use Cnizzardini\GovInfo\Collections;
 use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
 
+$api = new Api(new \GuzzleHttp\Client(), 'DEMO_KEY');
+$collection = new Collection($api);
 $requestor = new CollectionRequestor();
 
 $result = $collection->item($requestor->setStrCollectionCode('BILLS'));
@@ -80,6 +84,14 @@ Array
 Retrieve a specific package in a collection. 
 
 ```php
+use Cnizzardini\GovInfo\Api;
+use Cnizzardini\GovInfo\Collections;
+use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
+
+$api = new Api(new \GuzzleHttp\Client(), 'DEMO_KEY');
+$collection = new Collection($api);
+$requestor = new CollectionRequestor();
+
 $requestor->setStrCollectionCode('BILLS')
     ->setObjStartDate(new \DateTime('2018-01-01 12:00:00'))
     ->setObjEndDate(new \DateTime('2018-02-01 12:00:00'))
@@ -147,8 +159,10 @@ Array
 Retrieve a package as a specified content-type
 
 ```php
-$package = new Package($api);
+use Cnizzardini\GovInfo\Package;
+use Cnizzardini\GovInfo\Requestor\PackageRequestor;
 
+$package = new Package($api);
 $requestor = new PackageRequestor();
 $requestor->setStrPackageId('BILLS-115hr4033rfs')->setStrContentType('xml');
 
