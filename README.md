@@ -132,7 +132,6 @@ use Cnizzardini\GovInfo\Package;
 use Cnizzardini\GovInfo\Requestor\PackageRequestor;
 
 $package = new Package($api);
-
 $requestor = new PackageRequestor();
 
 $result = $package->summary($requestor->setStrPackageId('BILLS-115hr4033rfs'));
