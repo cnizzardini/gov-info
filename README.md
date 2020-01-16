@@ -18,7 +18,7 @@ Retrieve an index of all collections available
 
 ```php
 use Cnizzardini\GovInfo\Api;
-use Cnizzardini\GovInfo\Collections;
+use Cnizzardini\GovInfo\Collection;
 
 $api = new Api(new \GuzzleHttp\Client(), 'DEMO_KEY');
 $collection = new Collection($api);
@@ -48,7 +48,7 @@ Retrieve all packages in a collection
 
 ```php
 use Cnizzardini\GovInfo\Api;
-use Cnizzardini\GovInfo\Collections;
+use Cnizzardini\GovInfo\Collection;
 use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
 
 $api = new Api(new \GuzzleHttp\Client(), 'DEMO_KEY');
@@ -85,7 +85,7 @@ Retrieve a specific package in a collection.
 
 ```php
 use Cnizzardini\GovInfo\Api;
-use Cnizzardini\GovInfo\Collections;
+use Cnizzardini\GovInfo\Collection;
 use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
 
 $api = new Api(new \GuzzleHttp\Client(), 'DEMO_KEY');
