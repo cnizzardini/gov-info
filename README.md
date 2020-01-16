@@ -170,6 +170,23 @@ $result = $package->contentType($requestor);
 
 After running this code `$result` will be an instance of GuzzleHttp\Psr7\Response
 
+## Console 
+
+There is a minimalist console application that *can* be used, but its not designed for production use. 
+I built this so I could easily validate the library against the production API. Each command will prompt 
+you for an API key. To avoid this prompt you can create a local apiKey.txt file with your API key in there.
+
+```shell
+# displays collections
+php console.php collection:index
+
+# displays packages for a given collection
+php console.php collection:packages
+
+# retrieves a package summary
+php console.php package:summary
+```
+
 ## Testing
 
 ```bash
