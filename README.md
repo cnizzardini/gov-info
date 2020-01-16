@@ -55,7 +55,11 @@ $api = new Api(new \GuzzleHttp\Client(), 'DEMO_KEY');
 $collection = new Collection($api);
 $requestor = new CollectionRequestor();
 
-$result = $collection->item($requestor->setStrCollectionCode('BILLS'));
+$requestor
+    ->setStrCollectionCode('BILLS')
+    ->setObjStartDate(new DateTime('2019-01-01'));
+
+$result = $collection->item($requestor);
 
 ```
 
