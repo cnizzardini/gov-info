@@ -16,7 +16,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class CollectionIndexConsole extends Command
 {
-    use TraitApiKey;
+    use ApiKeyTrait;
 
     private $apiKey;
 

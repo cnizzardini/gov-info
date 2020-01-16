@@ -4,9 +4,9 @@ namespace Cnizzardini\GovInfo\Console;
 
 use Symfony\Component\Console\Input\InputInterface;
 
-trait TraitApiKey
+trait ApiKeyTrait
 {
-    use TraitApiKey;
+    use ApiKeyTrait;
 
     private $apiKey;
 
