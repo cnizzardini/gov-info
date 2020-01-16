@@ -39,8 +39,11 @@ class CollectionTest extends TestCase
         $objApi = new Api($objClient, self::KEY);
         $objCollection = new Collection($objApi);
         $objRequestor = new CollectionRequestor();
-        
-        $arrResult = $objCollection->item($objRequestor->setStrCollectionCode('BILLS'));
+        $objRequestor
+            ->setStrCollectionCode('BILLS')
+            ->setObjStartDate(new \DateTime('2020-01-01'));
+
+        $arrResult = $objCollection->item($objRequestor);
         $arrItem = reset($arrResult['packages']);
         $this->assertEquals('BILLS-115hr2740rfs', $arrItem['packageId']);
     }

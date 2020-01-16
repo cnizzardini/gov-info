@@ -48,10 +48,14 @@ final class Collection
         
         $strPath = self::ENDPOINT . '/' . $objRequestor->getStrCollectionCode();
 
-        if ($objRequestor->getObjStartDate()) {
-            $strPath.= '/' . urlencode($objRequestor->getObjStartDate()->format('Y-m-d')) . 'T';
-            $strPath.= urlencode($objRequestor->getObjStartDate()->format('H:i:s')) . 'Z';
+        $objStartDate = $objRequestor->getObjStartDate();
+
+        if (!$objStartDate instanceof \DateTime) {
+            throw new RunTimeException('Start Date is required');
         }
+
+        $strPath.= '/' . urlencode($objStartDate->format('Y-m-d')) . 'T';
+        $strPath.= urlencode($objStartDate->format('H:i:s')) . 'Z';
 
         if ($objRequestor->getObjEndDate()) {
             $strPath.= '/' . urlencode($objRequestor->getObjEndDate()->format('Y-m-d')) . 'T';
