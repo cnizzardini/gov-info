@@ -16,6 +16,8 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class CollectionIndexConsole extends Command
 {
+    use TraitApiKey;
+
     private $apiKey;
 
     public function configure()
@@ -51,24 +53,5 @@ class CollectionIndexConsole extends Command
         $table->render();
 
         return 0;
-    }
-
-    private function defineApiKeyFromFile()
-    {
-        $file = getcwd() . DIRECTORY_SEPARATOR . 'apiKey.txt';
-        if (file_exists($file)) {
-            $this->apiKey = trim(
-                file_get_contents($file)
-            );
-        }
-    }
-
-    private function getApiKey(InputInterface $input)
-    {
-        if (!empty($this->apiKey)) {
-            return $this->apiKey;
-        }
-
-        return $input->getArgument('apiKey');
     }
 }
