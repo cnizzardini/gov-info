@@ -6,8 +6,6 @@ use Symfony\Component\Console\Input\InputInterface;
 
 trait ApiKeyTrait
 {
-    use ApiKeyTrait;
-
     private $apiKey;
 
     private function defineApiKeyFromFile()
