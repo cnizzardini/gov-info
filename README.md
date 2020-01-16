@@ -174,7 +174,7 @@ After running this code `$result` will be an instance of GuzzleHttp\Psr7\Respons
 
 There is a minimalist console application that *can* be used, but its not designed for production use. 
 I built this so I could easily regression test the library against the production API. Each command 
-will prompt you for an API key. To avoid this prompt you can create a local apiKey.txt file with your 
+will prompt you for an API key. To avoid this prompt you can create a local `apiKey.txt` file with your 
 API key in there.
 
 ```shell
