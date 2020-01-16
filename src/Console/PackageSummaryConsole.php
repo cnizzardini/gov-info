@@ -25,9 +25,8 @@ class PackageSummaryConsole extends Command
     {
         $this
             ->setName('package:summary')
-            ->setDescription('Shows all packages for a collection');
-
-        $this->defineApiKeyFromFile();
+            ->setDescription('Shows all packages for a collection')
+            ->defineApiKeyFromFile();
 
         if (empty($this->apiKey)) {
             $this->addArgument('apiKey', InputArgument::REQUIRED, 'Your API Key');

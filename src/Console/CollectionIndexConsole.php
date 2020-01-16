@@ -24,9 +24,8 @@ class CollectionIndexConsole extends Command
     {
         $this
             ->setName('collection:index')
-            ->setDescription('Shows all collections');
-
-        $this->defineApiKeyFromFile();
+            ->setDescription('Shows all collections')
+            ->defineApiKeyFromFile();
 
         if (empty($this->apiKey)) {
             $this->addArgument('apiKey', InputArgument::REQUIRED, 'Your API Key');
