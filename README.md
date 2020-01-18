@@ -197,8 +197,16 @@ API key in there.
 # displays collections
 php console.php collection:index
 
-# displays packages for a given collection
+# display packages for a given collection
+ 
+# outputs table
 php console.php collection:packages
+
+# writes to csv
+php console.php collection:packages --csv
+
+# writes to csv in a specific folder
+php console.php collection:packages --csv --csvPath=/home/username/Desktop
 
 # retrieves a package summary
 php console.php package:summary
