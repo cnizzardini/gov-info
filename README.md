@@ -200,7 +200,7 @@ $result = $package->contentType($requestor);
 
 After running this code `$result` will be an instance of GuzzleHttp\Psr7\Response
 
-For additional usage examples, please look at `src/Console` and `src/Test`. 
+For additional usage examples, please look at `src/Console` and `tests`. 
 
 ## Console 
 
