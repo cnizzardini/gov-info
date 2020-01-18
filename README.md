@@ -20,7 +20,10 @@ Retrieve an index of all collections available
 use GovInfo\Api;
 use GovInfo\Collection;
 
-$api = new Api(new \GuzzleHttp\Client(), 'DEMO_KEY');
+$api = new Api(
+    new \GuzzleHttp\Client(), 
+    'DEMO_KEY'
+);
 $collection = new Collection($api);
 $result = $collection->index();
 ```
