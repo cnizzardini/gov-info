@@ -1,4 +1,13 @@
-#PHP Library for api.govinfo.gov
+# GOVINFO 
+
+A PHP library for accessing api.govinfo.gov
+  ________ ____________   ____.___ _______  ___________________   
+ /  _____/ \_____  \   \ /   /|   |\      \ \_   _____/\_____  \  
+/   \  ___  /   |   \   Y   / |   |/   |   \ |    __)   /   |   \ 
+\    \_\  \/    |    \     /  |   /    |    \|     \   /    |    \
+ \______  /\_______  /\___/   |___\____|__  /\___  /   \_______  /
+        \/         \/                     \/     \/            \/ 
+
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
