@@ -200,14 +200,20 @@ php console.php collection:index
 # display packages for a given collection 
 php console.php collection:packages
 
-# writes to csv
-php console.php collection:packages --csv
+# writes to csv file
+php console.php collection:packages --file
+
+# writes to csv file in a specific folder
+php console.php collection:packages --file --path=/home/username/Desktop
+
+# retrieves a package summary as a GuzzleHttp\Psr7\Response instance
+php console.php package:summary
+
+# retrieves a package summary and writes to file
+php console.php package:summary --file
 
 # writes to csv in a specific folder
-php console.php collection:packages --csv --csvPath=/home/username/Desktop
-
-# retrieves a package summary
-php console.php package:summary
+php console.php collection:packages --file --path=/home/username/Desktop
 ```
 
 ## Testing
