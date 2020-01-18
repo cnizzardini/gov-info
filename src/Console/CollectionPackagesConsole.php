@@ -44,8 +44,8 @@ class CollectionPackagesConsole extends Command
             'Downloads results as CSV'
         );
         $this->addOption(
-            'csvPath',
-            'csvPath',
+            'path',
+            'path',
             InputOption::VALUE_OPTIONAL,
             'Path to downloads folder (only required if console cannot find your home directory)',
             false
@@ -90,8 +90,8 @@ class CollectionPackagesConsole extends Command
     {
         $downloadPath = getenv('HOME') . DIRECTORY_SEPARATOR . 'Downloads';
 
-        if (!empty($input->getOption('csvPath'))) {
-            $downloadPath = $input->getOption('csvPath');
+        if (!empty($input->getOption('path'))) {
+            $downloadPath = $input->getOption('path');
             if (substr($downloadPath,-1,1) == DIRECTORY_SEPARATOR) {
                 $downloadPath = substr($downloadPath, 0, strlen($downloadPath) - 1);
             }
