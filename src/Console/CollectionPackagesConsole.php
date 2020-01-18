@@ -60,6 +60,7 @@ class CollectionPackagesConsole extends Command
         $collection = new Collection($api);
 
         $io = new SymfonyStyle($input, $output);
+        $io->comment('Loading collections...');
 
         $this->collectionCode = $this->askUserForCollectionCode($collection, $io);
         $dateTime = $this->askUserForStartDate(new DateTime('first day of last month'), $io);
@@ -68,6 +69,8 @@ class CollectionPackagesConsole extends Command
         $requestor
             ->setStrCollectionCode($this->collectionCode)
             ->setObjStartDate($dateTime);
+
+        $io->comment('Retrieving packages...');
 
         if ($input->getOption('file')) {
             $file = $this->downloadResultsToCsv($collection, $requestor, $input);
