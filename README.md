@@ -13,6 +13,8 @@
 ```
 
 [![CircleCI](https://circleci.com/gh/cnizzardini/gov-info/tree/master.svg?style=svg)](https://circleci.com/gh/cnizzardini/gov-info/tree/master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/55734858b3b9542b4bff/maintainability)](https://codeclimate.com/github/cnizzardini/gov-info/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/55734858b3b9542b4bff/test_coverage)](https://codeclimate.com/github/cnizzardini/gov-info/test_coverage)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
 This alpha stage package provides a very simple way to access [api.govinfo.gov](https://api.govinfo.gov/docs/)
