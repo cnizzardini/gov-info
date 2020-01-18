@@ -197,9 +197,7 @@ API key in there.
 # displays collections
 php console.php collection:index
 
-# display packages for a given collection
- 
-# outputs table
+# display packages for a given collection 
 php console.php collection:packages
 
 # writes to csv
