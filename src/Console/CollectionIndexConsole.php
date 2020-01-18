@@ -2,14 +2,15 @@
 
 namespace GovInfo\Console;
 
+use GovInfo\RunTimeException;
 use GuzzleHttp\Client;
 use GovInfo\Api;
 use GovInfo\Collection;
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
  * Console application for pulling collections
@@ -38,18 +39,20 @@ class CollectionIndexConsole extends Command
 
         $api = new Api(new Client(), $apiKey);
         $collection = new Collection($api);
+
+        $io = new SymfonyStyle($input, $output);
+        $io->comment('Loading collections...');
+
         $result = $collection->index();
 
-        $table = new Table($output);
-        $table->setHeaders(['collectionCode', 'collectionName', 'packageCount', 'granuleCount']);
-
-        foreach ($result['collections'] as $row) {
-            $table->addRow(
-                array_values($row)
-            );
+        if (!isset($result['collections'])) {
+            throw new RunTimeException('Error retrieving collections');
         }
 
-        $table->render();
+        $rows = array_map('array_values', $result['collections']);
+        $keys = array_keys(reset($result['collections']));
+
+        $io->table($keys, $rows);
 
         return 0;
     }
