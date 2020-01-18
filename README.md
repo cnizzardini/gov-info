@@ -1,6 +1,4 @@
-# GOVINFO 
-
-A PHP library for accessing api.govinfo.gov
+# GOVINFO: PHP library for accessing api.govinfo.gov
 
 ```text
  _______  _______            _________ _        _______  _______ 
