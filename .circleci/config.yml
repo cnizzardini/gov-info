@@ -28,7 +28,6 @@ jobs:
       - run:
           name: Run tests
           command: |
-            sudo docker-php-ext-enable xdebug
-            ./cc-test-reporter -r 96c631bd438b491caa133d73b02c7f6b85e916a40667998a6c470a0b5d1c3b89 before-build
+            ./cc-test-reporter before-build -r 96c631bd438b491caa133d73b02c7f6b85e916a40667998a6c470a0b5d1c3b89
             sudo ./vendor/bin/phpunit --coverage-clover clover.xml
             ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
