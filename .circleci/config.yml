@@ -1,0 +1,28 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: php/cli:7.2
+    steps:
+      - run:
+          name: Install system packages
+          command: apt-get update && apt-get -y install git
+      - run:
+          name: Install PHP extensions
+          command: docker-php-ext-install json
+      - checkout
+      - run:
+          name: Install Composer
+          command: |
+            php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+            php -r "if (hash_file('SHA384', 'composer-setup.php') === trim(file_get_contents('https://composer.github.io/installer.sig'))) { echo 'Installer verified'; } else { echo 'Installer invalid'; unlink('composer-setup.php'); } echo PHP_EOL;"
+            php composer-setup.php
+            php -r "unlink('composer-setup.php');"
+      - checkout # special step to check out source code to working directory
+      - run: sudo apt install -y libsqlite3-dev zlib1g-dev
+      - run: sudo docker-php-ext-install json
+      - run: sudo composer self-update
+      - run:
+          name: Run Unit tests
+          command: vendor/bin/phpunit
