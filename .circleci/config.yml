@@ -2,6 +2,8 @@ version: 2
 
 jobs:
   build:
+    environment:
+      CC_TEST_REPORTER_ID: 96c631bd438b491caa133d73b02c7f6b85e916a40667998a6c470a0b5d1c3b89
     docker:
       - image: circleci/php:7.2.26-cli-stretch
     working_directory: ~/govinfo
@@ -28,6 +30,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            ./cc-test-reporter before-build -r 96c631bd438b491caa133d73b02c7f6b85e916a40667998a6c470a0b5d1c3b89
+            sudo docker-php-ext-enable xdebug
+            ./cc-test-reporter before-build
             sudo ./vendor/bin/phpunit --coverage-clover clover.xml
             ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
