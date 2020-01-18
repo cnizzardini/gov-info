@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: php/cli:7.2
+      - image: circleci/7.2.26-cli-stretch
     steps:
       - run:
           name: Install system packages
