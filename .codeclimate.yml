@@ -3,7 +3,7 @@ exclude_patterns:
   - "docs/"
   - ".circleci/"
   - "tests/"
-  - "Console/"
+  - "src/Console/"
 version: "2"         # required to adjust maintainability checks
 checks:
   method-lines:
