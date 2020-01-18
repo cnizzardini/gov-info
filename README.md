@@ -1,10 +1,12 @@
-# PHP Library for api.govinfo.gov
+#PHP Library for api.govinfo.gov
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
 This alpha stage package provides a very simple way to access [api.govinfo.gov](https://api.govinfo.gov/docs/)
 
-## Install
+[See console demo](##console)
+
+##Install
 
 You can install this package via composer.
 
@@ -12,7 +14,7 @@ You can install this package via composer.
 composer require cnizzardini/gov-info
 ```
 
-## Usage
+##Usage
 
 Retrieve an index of all collections available
 
@@ -188,12 +190,14 @@ After running this code `$result` will be an instance of GuzzleHttp\Psr7\Respons
 
 For additional usage examples, please look at `src/Console` and `src/Test`. 
 
-## Console 
+##Console 
 
 There is a minimalist console application that *can* be used, but its not designed for production use. 
 I built this so I could easily regression test the library against the production API. Each command 
 will prompt you for an API key. To avoid this prompt you can create a local `apiKey.txt` file with your 
 API key in there.
+
+![Example](./docs/console-demo.svg)
 
 ```shell
 # displays collections
@@ -218,12 +222,12 @@ php console.php package:summary --file
 php console.php collection:packages --file --path=/home/username/Desktop
 ```
 
-## Testing
+##Testing
 
 ```bash
 vendor/bin/phpunit
 ```
 
-## License
+##License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
