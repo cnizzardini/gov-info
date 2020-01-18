@@ -84,7 +84,7 @@ final class Collection
         $strPackageId = $objRequestor->getStrPackageId();
         
         if (!empty($strDocClass)) {
-            $arrResult['packages'] = array_filter($arrResult['packages'], function($arrPackage) use ($strDocClass) {
+            $arrResult['packages'] = array_filter($arrResult['packages'], function ($arrPackage) use ($strDocClass) {
                 if ($arrPackage['docClass'] == $strDocClass) {
                     return $arrPackage;
                 }
@@ -92,7 +92,7 @@ final class Collection
         }
         
         if (!empty($strTitle)) {
-            $arrResult['packages'] = array_filter($arrResult['packages'], function($arrResult) use ($strTitle) {
+            $arrResult['packages'] = array_filter($arrResult['packages'], function ($arrResult) use ($strTitle) {
                 if (preg_match("/$strTitle/i", $arrResult['title'])) {
                     return $arrResult;
                 }
@@ -100,7 +100,7 @@ final class Collection
         }
         
         if (!empty($strPackageId)) {
-            $arrResult['packages'] = array_filter($arrResult['packages'], function($arrResult) use ($strPackageId) {
+            $arrResult['packages'] = array_filter($arrResult['packages'], function ($arrResult) use ($strPackageId) {
                 if ($arrResult['packageId'] == $strPackageId) {
                     return $arrResult;
                 }
