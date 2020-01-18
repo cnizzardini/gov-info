@@ -18,7 +18,7 @@ This alpha stage package provides a very simple way to access [api.govinfo.gov](
 
 [See console demo](#Console)
 
-##Install
+## Install
 
 You can install this package via composer.
 
