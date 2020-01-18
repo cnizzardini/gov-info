@@ -35,8 +35,8 @@ class CollectionIndexConsole extends Command
 
     public function execute(InputInterface $input, OutputInterface $output)
     {
-        $io = new SymfonyStyle($input, $output);
-        $io->comment('Loading collections...');
+        $symfonyStyle = new SymfonyStyle($input, $output);
+        $symfonyStyle->comment('Loading collections...');
 
         $apiKey = $this->getApiKey($input);
         $api = new Api(new Client(), $apiKey);
@@ -50,7 +50,7 @@ class CollectionIndexConsole extends Command
         $rows = array_map('array_values', $result['collections']);
         $keys = array_keys(reset($result['collections']));
 
-        $io->table($keys, $rows);
+        $symfonyStyle->table($keys, $rows);
 
         return 0;
     }

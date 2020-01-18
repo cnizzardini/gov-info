@@ -54,42 +54,42 @@ class CollectionPackagesConsole extends Command
 
     public function execute(InputInterface $input, OutputInterface $output)
     {
-        $io = new SymfonyStyle($input, $output);
-        $io->comment('Loading collections...');
+        $symfonyStyle = new SymfonyStyle($input, $output);
+        $symfonyStyle->comment('Loading collections...');
 
         $apiKey = $this->getApiKey($input);
         $api = new Api(new Client(), $apiKey);
         $collection = new Collection($api);
 
-        $this->collectionCode = $this->askUserForCollectionCode($collection, $io);
-        $dateTime = $this->askUserForStartDate(new DateTime('first day of last month'), $io);
+        $this->collectionCode = $this->askUserForCollectionCode($collection, $symfonyStyle);
+        $dateTime = $this->askUserForStartDate(new DateTime('first day of last month'), $symfonyStyle);
 
         $requestor = new CollectionRequestor();
         $requestor
             ->setStrCollectionCode($this->collectionCode)
             ->setObjStartDate($dateTime);
 
-        $io->comment('Retrieving packages...');
+        $symfonyStyle->comment('Retrieving packages...');
 
         if ($input->getOption('file')) {
             $file = $this->downloadResultsToCsv($collection, $requestor, $input);
             if (!$file) {
-                $io->error('Unable to write file');
+                $symfonyStyle->error('Unable to write file');
                 return 0;
             }
-            $io->success('File downloaded to ' . $file);
+            $symfonyStyle->success('File downloaded to ' . $file);
             return 0;
         }
 
-        $this->displayResultsInTable($collection, $requestor, $io);
+        $this->displayResultsInTable($collection, $requestor, $symfonyStyle);
 
         return 0;
     }
 
-    private function displayResultsInTable(Collection $collection, Requestor $requestor, SymfonyStyle $io)
+    private function displayResultsInTable(Collection $collection, Requestor $requestor, SymfonyStyle $symfonyStyle)
     {
         $results = $this->formatResults($collection, $requestor);
-        $io->table($results['header'], $results['rows']);
+        $symfonyStyle->table($results['header'], $results['rows']);
     }
 
     private function downloadResultsToCsv(Collection $collection, Requestor $requestor, InputInterface $input) : string
@@ -107,14 +107,14 @@ class CollectionPackagesConsole extends Command
         $file = $downloadPath . DIRECTORY_SEPARATOR . 'govinfo-' . $collectionCode . '-' . strtotime('now') . '.csv';
 
         $results = $this->formatResults($collection, $requestor);
-        $fp = fopen($file, 'w');
+        $fileResource = fopen($file, 'w');
 
-        fputcsv($fp, $results['header']);
+        fputcsv($fileResource, $results['header']);
         foreach ($results['rows'] as $row) {
-            fputcsv($fp, $row);
+            fputcsv($fileResource, $row);
         }
 
-        if (!fclose($fp)) {
+        if (!fclose($fileResource)) {
             throw new RunTimeException('Error writing file');
         }
 
@@ -138,7 +138,7 @@ class CollectionPackagesConsole extends Command
         ];
     }
 
-    private function askUserForCollectionCode(Collection $collection, SymfonyStyle $io) : string
+    private function askUserForCollectionCode(Collection $collection, SymfonyStyle $symfonyStyle) : string
     {
         $result = $collection->index();
 
@@ -149,17 +149,17 @@ class CollectionPackagesConsole extends Command
         $collectionCodes = array_column($result['collections'], 'collectionName','collectionCode');
 
         return strtoupper(
-            $io->choice(
+            $symfonyStyle->choice(
                 'Retrieve packages from what collectionCode?',
                 $collectionCodes
             )
         );
     }
 
-    private function askUserForStartDate(DateTime $dateTime, SymfonyStyle $io) : DateTime
+    private function askUserForStartDate(DateTime $dateTime, SymfonyStyle $symfonyStyle) : DateTime
     {
         $startDate = strtoupper(
-            $io->ask(
+            $symfonyStyle->ask(
                 'Enter a start date as YYYY-MM-DD',
                 $dateTime->format('Y-m-d')
             )

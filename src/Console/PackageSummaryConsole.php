@@ -10,11 +10,11 @@ use GovInfo\Api;
 use GovInfo\Package;
 use GovInfo\Requestor\PackageRequestor;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\Input;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Question\Question;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
@@ -61,9 +61,9 @@ class PackageSummaryConsole extends Command
         $package = new Package($api);
         $requestor = new PackageRequestor();
 
-        $io = new SymfonyStyle($input, $output);
-        $this->packageId = $io->ask('Enter a PackageId', 'BILLS-116hr5629ih');
-        $this->contentType = $io->ask('Enter a Content Type (i.e. xml)', 'xml');
+        $symfonyStyle = new SymfonyStyle($input, $output);
+        $this->packageId = $symfonyStyle->ask('Enter a PackageId', 'BILLS-116hr5629ih');
+        $this->contentType = $symfonyStyle->ask('Enter a Content Type (i.e. xml)', 'xml');
 
         $requestor
             ->setStrPackageId($this->packageId)
@@ -72,10 +72,10 @@ class PackageSummaryConsole extends Command
         if ($input->getOption('file')) {
             $file = $this->downloadResultsToFile($requestor, $package, $input);
             if (!$file) {
-                $io->error('Unable to write file');
+                $symfonyStyle->error('Unable to write file');
                 return 0;
             }
-            $io->success('File downloaded to ' . $file);
+            $symfonyStyle->success('File downloaded to ' . $file);
             return 0;
         }
 
@@ -87,15 +87,6 @@ class PackageSummaryConsole extends Command
 
     private function downloadResultsToFile(Requestor $requestor, Package $package, InputInterface $input) : string
     {
-        $downloadPath = getenv('HOME') . DIRECTORY_SEPARATOR . 'Downloads';
-
-        if (!empty($input->getOption('path'))) {
-            $downloadPath = $input->getOption('path');
-            if (substr($downloadPath,-1,1) == DIRECTORY_SEPARATOR) {
-                $downloadPath = substr($downloadPath, 0, strlen($downloadPath) - 1);
-            }
-        }
-
         $response = $package->contentType($requestor);
 
         $contentType = strtolower($this->contentType);
@@ -106,7 +97,8 @@ class PackageSummaryConsole extends Command
             $string = $this->formatXml($string);
         }
 
-        $file = $downloadPath . DIRECTORY_SEPARATOR . $this->packageId . '-' . strtotime('now');
+        $file = $this->resolveDownloadPath($input);
+        $file.= DIRECTORY_SEPARATOR . $this->packageId . '-' . strtotime('now');
         $file.= '.' . $contentType;
 
         if (!file_put_contents($file, $string)) {
@@ -114,6 +106,21 @@ class PackageSummaryConsole extends Command
         }
 
         return $file;
+    }
+
+    private function resolveDownloadPath(InputInterface $input)
+    {
+        $downloadPath = $input->getOption('path');
+
+        if (empty($input->getOption('path'))) {
+            return getenv('HOME') . DIRECTORY_SEPARATOR . 'Downloads';
+        }
+
+        if (substr($downloadPath,-1,1) != DIRECTORY_SEPARATOR) {
+            return substr($downloadPath, 0, strlen($downloadPath) - 1);
+        }
+
+        return $downloadPath;
     }
 
     private function formatXml(string $xmlString) : string
