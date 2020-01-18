@@ -4,6 +4,7 @@ namespace GovInfo;
 
 use GuzzleHttp\Psr7\Uri;
 use GovInfo\Requestor\CollectionRequestor;
+use \LogicException;
 
 final class Collection
 {
@@ -35,11 +36,13 @@ final class Collection
      *
      * @param CollectionRequestor $objRequestor
      * @return array
+     * @throws LogicException
+     * @throws RunTimeException
      */
     public function item(CollectionRequestor $objRequestor) : array
     {
         if (empty($objRequestor->getStrCollectionCode())) {
-            throw new \LogicException('CollectionRequestor::strCollectionCode is required');
+            throw new LogicException('CollectionRequestor::strCollectionCode is required');
         }
         
         $objUri = new Uri();
