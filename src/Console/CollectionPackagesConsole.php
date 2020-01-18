@@ -149,8 +149,7 @@ class CollectionPackagesConsole extends Command
         return strtoupper(
             $io->choice(
                 'Retrieve packages from what collectionCode?',
-                $collectionCodes,
-                'BILLS'
+                $collectionCodes
             )
         );
     }
