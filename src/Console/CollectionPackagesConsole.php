@@ -38,8 +38,8 @@ class CollectionPackagesConsole extends Command
         }
 
         $this->addOption(
-            'csv',
-            'csv',
+            'file',
+            'file',
             InputOption::VALUE_NONE,
             'Downloads results as CSV'
         );
@@ -69,8 +69,12 @@ class CollectionPackagesConsole extends Command
             ->setStrCollectionCode($this->collectionCode)
             ->setObjStartDate($dateTime);
 
-        if ($input->getOption('csv')) {
+        if ($input->getOption('file')) {
             $file = $this->downloadResultsToCsv($collection, $requestor, $input);
+            if (!$file) {
+                $io->error('Unable to write file');
+                return 0;
+            }
             $io->success('File downloaded to ' . $file);
             return 0;
         }
