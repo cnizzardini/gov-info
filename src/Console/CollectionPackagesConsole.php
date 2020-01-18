@@ -54,13 +54,12 @@ class CollectionPackagesConsole extends Command
 
     public function execute(InputInterface $input, OutputInterface $output)
     {
-        $apiKey = $this->getApiKey($input);
-
-        $api = new Api(new Client(), $apiKey);
-        $collection = new Collection($api);
-
         $io = new SymfonyStyle($input, $output);
         $io->comment('Loading collections...');
+
+        $apiKey = $this->getApiKey($input);
+        $api = new Api(new Client(), $apiKey);
+        $collection = new Collection($api);
 
         $this->collectionCode = $this->askUserForCollectionCode($collection, $io);
         $dateTime = $this->askUserForStartDate(new DateTime('first day of last month'), $io);

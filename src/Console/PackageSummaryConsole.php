@@ -57,7 +57,6 @@ class PackageSummaryConsole extends Command
     public function execute(InputInterface $input, OutputInterface $output)
     {
         $apiKey = $this->getApiKey($input);
-
         $api = new Api(new Client(), $apiKey);
         $package = new Package($api);
         $requestor = new PackageRequestor();
