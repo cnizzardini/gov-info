@@ -186,6 +186,8 @@ $result = $package->contentType($requestor);
 
 After running this code `$result` will be an instance of GuzzleHttp\Psr7\Response
 
+For additional usage examples, please look at `src/Console` and `src/Test`. 
+
 ## Console 
 
 There is a minimalist console application that *can* be used, but its not designed for production use. 
