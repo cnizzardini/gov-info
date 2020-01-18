@@ -1,0 +1,21 @@
+exclude_patterns:
+  - "vendor/"
+  - "docs/"
+  - ".circleci/"
+  - "tests/"
+version: "2"         # required to adjust maintainability checks
+checks:
+  method-lines:
+    config:
+      threshold: 30
+plugins:
+  phpmd:
+    enabled: true
+    config:
+      file_extensions:
+        - php
+      rulesets: "phpmd.xml"
+  phpcodesniffer:
+    enabled: true
+    config:
+      file_extensions: "php"
