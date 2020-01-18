@@ -1,6 +1,6 @@
 <?php
 
-namespace Cnizzardini\GovInfo\Requestor;
+namespace GovInfo\Requestor;
 
 final class CollectionRequestor extends Requestor
 {

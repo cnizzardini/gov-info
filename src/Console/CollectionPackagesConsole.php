@@ -1,11 +1,11 @@
 <?php
 
-namespace Cnizzardini\GovInfo\Console;
+namespace GovInfo\Console;
 
 use GuzzleHttp\Client;
-use Cnizzardini\GovInfo\Api;
-use Cnizzardini\GovInfo\Collection;
-use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
+use GovInfo\Api;
+use GovInfo\Collection;
+use GovInfo\Requestor\CollectionRequestor;
 use \DateTime;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;

@@ -1,11 +1,12 @@
 <?php
+
 use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
-use Cnizzardini\GovInfo\Api;
-use Cnizzardini\GovInfo\Package;
-use Cnizzardini\GovInfo\Requestor\PackageRequestor;
+use GovInfo\Api;
+use GovInfo\Package;
+use GovInfo\Requestor\PackageRequestor;
 
 class PackageTest extends TestCase
 {

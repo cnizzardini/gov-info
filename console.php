@@ -4,9 +4,9 @@
 require __DIR__.'/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use Cnizzardini\GovInfo\Console\CollectionIndexConsole;
-use Cnizzardini\GovInfo\Console\CollectionPackagesConsole;
-use Cnizzardini\GovInfo\Console\PackageSummaryConsole;
+use GovInfo\Console\CollectionIndexConsole;
+use GovInfo\Console\CollectionPackagesConsole;
+use GovInfo\Console\PackageSummaryConsole;
 
 $application = new Application();
 $application->add(new CollectionIndexConsole());

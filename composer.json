@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Cnizzardini\\GovInfo\\": "src"
+            "GovInfo\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Cnizzardini\\GovInfo\\Test\\": "tests"
+            "GovInfo\\Test\\": "tests"
         }
     }
 }

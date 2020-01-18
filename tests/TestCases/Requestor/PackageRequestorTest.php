@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use Cnizzardini\GovInfo\Requestor\PackageRequestor;
+use GovInfo\Requestor\PackageRequestor;
 
 class PackageRequestorTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
+use GovInfo\Requestor\CollectionRequestor;
 
 class CollectionRequestorTest extends TestCase
 {

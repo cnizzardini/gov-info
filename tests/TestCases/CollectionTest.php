@@ -1,11 +1,12 @@
 <?php
+
 use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
-use Cnizzardini\GovInfo\Api;
-use Cnizzardini\GovInfo\Collection;
-use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
+use GovInfo\Api;
+use GovInfo\Collection;
+use GovInfo\Requestor\CollectionRequestor;
 
 class CollectionTest extends TestCase
 {

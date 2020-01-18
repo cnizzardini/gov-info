@@ -1,6 +1,6 @@
 <?php
 
-namespace Cnizzardini\GovInfo\Requestor;
+namespace GovInfo\Requestor;
 
 abstract class Requestor
 {

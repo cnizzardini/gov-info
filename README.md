@@ -17,8 +17,8 @@ composer require cnizzardini/gov-info
 Retrieve an index of all collections available
 
 ```php
-use Cnizzardini\GovInfo\Api;
-use Cnizzardini\GovInfo\Collection;
+use GovInfo\Api;
+use GovInfo\Collection;
 
 $api = new Api(new \GuzzleHttp\Client(), 'DEMO_KEY');
 $collection = new Collection($api);
@@ -47,11 +47,14 @@ Array
 Retrieve all packages in a collection
 
 ```php
-use Cnizzardini\GovInfo\Api;
-use Cnizzardini\GovInfo\Collection;
-use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
+use GovInfo\Api;
+use GovInfo\Collection;
+use GovInfo\Requestor\CollectionRequestor;
 
-$api = new Api(new \GuzzleHttp\Client(), 'DEMO_KEY');
+$api = new Api(
+    new \GuzzleHttp\Client(), 
+    'DEMO_KEY'
+);
 $collection = new Collection($api);
 $requestor = new CollectionRequestor();
 
@@ -88,15 +91,19 @@ Array
 Retrieve a specific package in a collection. 
 
 ```php
-use Cnizzardini\GovInfo\Api;
-use Cnizzardini\GovInfo\Collection;
-use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
+use GovInfo\Api;
+use GovInfo\Collection;
+use GovInfo\Requestor\CollectionRequestor;
 
-$api = new Api(new \GuzzleHttp\Client(), 'DEMO_KEY');
+$api = new Api(
+    new \GuzzleHttp\Client(), 
+    'DEMO_KEY'
+);
 $collection = new Collection($api);
 $requestor = new CollectionRequestor();
 
-$requestor->setStrCollectionCode('BILLS')
+$requestor
+    ->setStrCollectionCode('BILLS')
     ->setObjStartDate(new \DateTime('2018-01-01 12:00:00'))
     ->setObjEndDate(new \DateTime('2018-02-01 12:00:00'))
     ->setStrDocClass('hr')
@@ -132,8 +139,8 @@ Array
 Retrieve a summary of a package.
 
 ```php
-use Cnizzardini\GovInfo\Package;
-use Cnizzardini\GovInfo\Requestor\PackageRequestor;
+use GovInfo\Package;
+use GovInfo\Requestor\PackageRequestor;
 
 $package = new Package($api);
 $requestor = new PackageRequestor();
@@ -162,12 +169,14 @@ Array
 Retrieve a package as a specified content-type
 
 ```php
-use Cnizzardini\GovInfo\Package;
-use Cnizzardini\GovInfo\Requestor\PackageRequestor;
+use GovInfo\Package;
+use GovInfo\Requestor\PackageRequestor;
 
 $package = new Package($api);
 $requestor = new PackageRequestor();
-$requestor->setStrPackageId('BILLS-115hr4033rfs')->setStrContentType('xml');
+$requestor
+    ->setStrPackageId('BILLS-115hr4033rfs')
+    ->setStrContentType('xml');
 
 $result = $package->contentType($requestor);
 ```

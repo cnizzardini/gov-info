@@ -1,9 +1,9 @@
 <?php
 
-namespace Cnizzardini\GovInfo;
+namespace GovInfo;
 
 use GuzzleHttp\Psr7\Uri;
-use Cnizzardini\GovInfo\Requestor\PackageRequestor;
+use GovInfo\Requestor\PackageRequestor;
 
 final class Package
 {
@@ -91,7 +91,7 @@ final class Package
     /**
      * Get granule summary
      * 
-     * @param \Cnizzardini\GovInfo\Requestor\PackageRequestor $objRequestor
+     * @param \GovInfo\Requestor\PackageRequestor $objRequestor
      * @return array
      * @throws \LogicException
      */

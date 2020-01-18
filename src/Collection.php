@@ -1,9 +1,9 @@
 <?php
 
-namespace Cnizzardini\GovInfo;
+namespace GovInfo;
 
 use GuzzleHttp\Psr7\Uri;
-use Cnizzardini\GovInfo\Requestor\CollectionRequestor;
+use GovInfo\Requestor\CollectionRequestor;
 
 final class Collection
 {

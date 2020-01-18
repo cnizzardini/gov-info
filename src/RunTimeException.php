@@ -1,6 +1,6 @@
 <?php
 
-namespace Cnizzardini\GovInfo;
+namespace GovInfo;
 
 use \Exception;
 

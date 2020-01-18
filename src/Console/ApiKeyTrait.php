@@ -1,6 +1,6 @@
 <?php
 
-namespace Cnizzardini\GovInfo\Console;
+namespace GovInfo\Console;
 
 use Symfony\Component\Console\Input\InputInterface;
 

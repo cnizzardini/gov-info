@@ -1,6 +1,6 @@
 <?php
 
-namespace Cnizzardini\GovInfo;
+namespace GovInfo;
 
 use \GuzzleHttp\Psr7\Uri;
 use \GuzzleHttp\Client;

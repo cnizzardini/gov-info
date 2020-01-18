@@ -1,10 +1,10 @@
 <?php
 
-namespace Cnizzardini\GovInfo\Console;
+namespace GovInfo\Console;
 
 use GuzzleHttp\Client;
-use Cnizzardini\GovInfo\Api;
-use Cnizzardini\GovInfo\Collection;
+use GovInfo\Api;
+use GovInfo\Collection;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Input\InputInterface;
