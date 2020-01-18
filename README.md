@@ -212,7 +212,7 @@ php console.php package:summary
 # retrieves a package summary and writes to file
 php console.php package:summary --file
 
-# writes to csv in a specific folder
+# writes to file in a specific folder
 php console.php collection:packages --file --path=/home/username/Desktop
 ```
 
