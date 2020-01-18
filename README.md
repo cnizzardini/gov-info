@@ -14,7 +14,6 @@ A PHP library for accessing api.govinfo.gov
                                                                  
 ```
 
-
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
 This alpha stage package provides a very simple way to access [api.govinfo.gov](https://api.govinfo.gov/docs/)
