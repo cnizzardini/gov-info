@@ -4,9 +4,9 @@ namespace GovInfo\Requestor;
 
 final class PackageRequestor extends Requestor
 {
-    private $strPackageId = '',
-            $strGranuleId = '',
-            $strContentType = '';
+    private $strPackageId = '';
+    private $strGranuleId = '';
+    private $strContentType = '';
 
     public function setStrPackageId(string $strPackageId) : self
     {

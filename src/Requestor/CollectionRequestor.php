@@ -4,12 +4,12 @@ namespace GovInfo\Requestor;
 
 final class CollectionRequestor extends Requestor
 {
-    private $strCollectionCode = '',
-            $objStartDate = null,
-            $objEndDate = null,
-            $strDocClass = '',
-            $strTitle = '',
-            $strPackageId = '';
+    private $strCollectionCode = '';
+    private $objStartDate = '';
+    private $objEndDate = '';
+    private $strDocClass = '';
+    private $strTitle = '';
+    private $strPackageId = '';
 
     public function setStrCollectionCode(string $strCollectionCode) : self
     {
