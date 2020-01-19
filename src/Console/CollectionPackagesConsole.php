@@ -85,15 +85,13 @@ class CollectionPackagesConsole extends Command
                 $symfonyStyle->error('Unable to write file');
                 return 0;
             }
-            $symfonyStyle->success('File downloaded to ' . $file);
+            $this->printSuccess($symfonyStyle, $collection, ['File downloaded to ' . $file]);
             return 0;
         }
 
         $this->displayResultsInTable($collection, $requestor, $symfonyStyle);
 
-        $api = $collection->getObjApi();
-        $symfonyStyle->success('Request completed');
-        $symfonyStyle->writeln($api->getObjUri());
+        $this->printSuccess($symfonyStyle, $collection);
 
         return 0;
     }
@@ -178,5 +176,14 @@ class CollectionPackagesConsole extends Command
         );
 
         return new DateTime($startDate);
+    }
+
+    private function printSuccess(SymfonyStyle $symfonyStyle, Collection $collection, array $output = []) : void
+    {
+        $api = $collection->getObjApi();
+        $arrayOut = array_merge(['Request completed'], $output);
+        $symfonyStyle->success($arrayOut);
+        $symfonyStyle->writeln('From: ' . $api->getObjUri());
+        $symfonyStyle->writeln('');
     }
 }

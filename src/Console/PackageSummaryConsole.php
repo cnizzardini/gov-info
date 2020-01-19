@@ -84,14 +84,13 @@ class PackageSummaryConsole extends Command
                 $symfonyStyle->error('Unable to write file');
                 return 0;
             }
-            $symfonyStyle->success('File downloaded to ' . $file);
-            $this->printRequestedFrom($symfonyStyle, $package);
+            $this->printSuccess($symfonyStyle, $package, ['File downloaded to ' . $file]);
             return 0;
         }
 
         $response = $package->contentType($requestor);
         print_r($response);
-        $this->printRequestedFrom($symfonyStyle, $package);
+        $this->printSuccess($symfonyStyle, $package);
 
         return 0;
     }
@@ -145,10 +144,12 @@ class PackageSummaryConsole extends Command
         return $xmlDocument->saveXML();
     }
 
-    private function printRequestedFrom(SymfonyStyle $symfonyStyle, Package $package) : void
+    private function printSuccess(SymfonyStyle $symfonyStyle, Package $package, array $output = []) : void
     {
         $api = $package->getObjApi();
-        $symfonyStyle->success('Request completed');
-        $symfonyStyle->writeln($api->getObjUri());
+        $arrayOut = array_merge(['Request completed'], $output);
+        $symfonyStyle->success($arrayOut);
+        $symfonyStyle->writeln('From: ' . $api->getObjUri());
+        $symfonyStyle->writeln('');
     }
 }

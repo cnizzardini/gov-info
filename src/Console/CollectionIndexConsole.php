@@ -62,6 +62,7 @@ class CollectionIndexConsole extends Command
         $api = $collection->getObjApi();
         $symfonyStyle->success('Request completed');
         $symfonyStyle->writeln($api->getObjUri());
+        $symfonyStyle->writeln('');
 
         return 0;
     }
