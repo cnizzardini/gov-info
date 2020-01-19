@@ -4,6 +4,7 @@ namespace GovInfo;
 
 use \GuzzleHttp\Psr7\Uri;
 use \GuzzleHttp\Client;
+use \LogicException;
 
 final class Api
 {
@@ -17,7 +18,7 @@ final class Api
      * @param Client $objHttp
      * @param string $strApiKey
      */
-    public function __construct(Client $objHttp, string $strApiKey)
+    public function __construct(Client $objHttp, string $strApiKey = '')
     {
         $this->objHttp = $objHttp;
         $this->strApiKey = $strApiKey;
@@ -32,9 +33,13 @@ final class Api
     public function get(Uri $objUri) : \GuzzleHttp\Psr7\Response
     {
         if (empty($objUri->getPath())) {
-            throw new \LogicException('Uri must contain a valid path');
+            throw new LogicException('Uri must contain a valid path');
         }
-        
+
+        if (empty($this->strApiKey)) {
+            throw new LogicException('Api Key is required');
+        }
+
         $objUri = $objUri->withHost(self::URL)->withScheme('https');
         $objUri = $objUri->withQueryValue($objUri, 'api_key', $this->strApiKey);
 
@@ -52,23 +57,19 @@ final class Api
         $objResponse = $this->get($objUri);
         return json_decode($objResponse->getBody()->getContents(), true);
     }
-    
-    /**
-     * Return Guzzle Client
-     * 
-     * @return \GuzzleHttp\Client
-     */
+
     public function getObjHttp() : Client
     {
         return $this->objHttp;
     }
-    
-    /**
-     * Return API Key
-     * 
-     * @return string
-     */
-    public function getStrKey() : string
+
+    public function setStrApiKey(string $key) : self
+    {
+        $this->strApiKey = $key;
+        return $this;
+    }
+
+    public function getStrApiKey() : string
     {
         return $this->strApiKey;
     }    

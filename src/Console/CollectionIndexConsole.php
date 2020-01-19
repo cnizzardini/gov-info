@@ -3,7 +3,6 @@
 namespace GovInfo\Console;
 
 use GovInfo\RunTimeException;
-use GuzzleHttp\Client;
 use GovInfo\Api;
 use GovInfo\Collection;
 use Symfony\Component\Console\Command\Command;
@@ -20,6 +19,13 @@ class CollectionIndexConsole extends Command
     use ApiKeyTrait;
 
     private $apiKey;
+    private $api;
+
+    public function __construct(string $name = null, Api $api)
+    {
+        parent::__construct($name);
+        $this->api = $api;
+    }
 
     public function configure()
     {
@@ -38,9 +44,10 @@ class CollectionIndexConsole extends Command
         $symfonyStyle = new SymfonyStyle($input, $output);
         $symfonyStyle->comment('Loading collections...');
 
-        $apiKey = $this->getApiKey($input);
-        $api = new Api(new Client(), $apiKey);
-        $collection = new Collection($api);
+        $this->api->setStrApiKey(
+            $this->getApiKey($input)
+        );
+        $collection = new Collection($this->api);
         $result = $collection->index();
 
         if (!isset($result['collections'])) {

@@ -25,6 +25,13 @@ class CollectionPackagesConsole extends Command
 
     private $apiKey;
     private $collectionCode;
+    private $api;
+
+    public function __construct(string $name = null, Api $api)
+    {
+        parent::__construct($name);
+        $this->api = $api;
+    }
 
     public function configure()
     {
@@ -57,9 +64,10 @@ class CollectionPackagesConsole extends Command
         $symfonyStyle = new SymfonyStyle($input, $output);
         $symfonyStyle->comment('Loading collections...');
 
-        $apiKey = $this->getApiKey($input);
-        $api = new Api(new Client(), $apiKey);
-        $collection = new Collection($api);
+        $this->api->setStrApiKey(
+            $this->getApiKey($input)
+        );
+        $collection = new Collection($this->api);
 
         $this->collectionCode = $this->askUserForCollectionCode($collection, $symfonyStyle);
         $dateTime = $this->askUserForStartDate(new DateTime('first day of last month'), $symfonyStyle);

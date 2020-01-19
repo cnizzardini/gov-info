@@ -27,6 +27,13 @@ class PackageSummaryConsole extends Command
     private $apiKey;
     private $packageId;
     private $contentType;
+    private $api;
+
+    public function __construct(string $name = null, Api $api)
+    {
+        parent::__construct($name);
+        $this->api = $api;
+    }
 
     public function configure()
     {
@@ -57,8 +64,10 @@ class PackageSummaryConsole extends Command
     public function execute(InputInterface $input, OutputInterface $output)
     {
         $apiKey = $this->getApiKey($input);
-        $api = new Api(new Client(), $apiKey);
-        $package = new Package($api);
+        $this->api->setStrApiKey(
+            $this->getApiKey($input)
+        );
+        $package = new Package($this->api);
         $requestor = new PackageRequestor();
 
         $symfonyStyle = new SymfonyStyle($input, $output);
