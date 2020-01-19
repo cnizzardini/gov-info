@@ -1,3 +1,4 @@
 vendor
 composer.lock
 /apiKey.txt
+/tests/coverage/
