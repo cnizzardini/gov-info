@@ -9,6 +9,8 @@ use LogicException;
 
 final class Package
 {
+    use EndpointTrait;
+
     private const ENDPOINT = 'packages';
     
     /**

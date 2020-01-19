@@ -12,6 +12,7 @@ final class Api
     private const URL = 'api.govinfo.gov';
     private $objHttp;
     private $strApiKey;
+    private $objUri;
     
     /**
      * Construct an instance
@@ -43,8 +44,9 @@ final class Api
 
         $objUri = $objUri->withHost(self::URL)->withScheme('https');
         $objUri = $objUri->withQueryValue($objUri, 'api_key', $this->strApiKey);
+        $this->objUri =$objUri;
 
-        return $this->objHttp->get($objUri);
+        return $this->objHttp->get($this->objUri);
     }
     
     /**
@@ -73,5 +75,10 @@ final class Api
     public function getStrApiKey() : string
     {
         return $this->strApiKey;
-    }    
+    }
+
+    public function getObjUri() : Uri
+    {
+        return $this->objUri;
+    }
 }

@@ -8,6 +8,8 @@ use LogicException;
 
 final class Collection
 {
+    use EndpointTrait;
+
     private const ENDPOINT = 'collections';
     
     /**

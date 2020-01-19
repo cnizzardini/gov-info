@@ -91,6 +91,10 @@ class CollectionPackagesConsole extends Command
 
         $this->displayResultsInTable($collection, $requestor, $symfonyStyle);
 
+        $api = $collection->getObjApi();
+        $symfonyStyle->success('Request completed');
+        $symfonyStyle->writeln($api->getObjUri());
+
         return 0;
     }
 

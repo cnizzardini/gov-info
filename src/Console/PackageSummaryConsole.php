@@ -85,11 +85,13 @@ class PackageSummaryConsole extends Command
                 return 0;
             }
             $symfonyStyle->success('File downloaded to ' . $file);
+            $this->printRequestedFrom($symfonyStyle, $package);
             return 0;
         }
 
         $response = $package->contentType($requestor);
         print_r($response);
+        $this->printRequestedFrom($symfonyStyle, $package);
 
         return 0;
     }
@@ -141,5 +143,12 @@ class PackageSummaryConsole extends Command
         $xmlDocument->loadXML($xml->asXML());
 
         return $xmlDocument->saveXML();
+    }
+
+    private function printRequestedFrom(SymfonyStyle $symfonyStyle, Package $package) : void
+    {
+        $api = $package->getObjApi();
+        $symfonyStyle->success('Request completed');
+        $symfonyStyle->writeln($api->getObjUri());
     }
 }
