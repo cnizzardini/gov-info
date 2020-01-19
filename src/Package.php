@@ -28,9 +28,7 @@ final class Package
      */
     public function summary(PackageRequestor $objRequestor) : array
     {
-        if (empty($objRequestor->getStrPackageId())) {
-            throw new \LogicException('PackageRequestor::strCollectionCode is required');
-        }
+        $this->requireStrPackageId($objRequestor);
         
         $objUri = new Uri();
         $objUri = $objUri->withQueryValue($objUri, 'pageSize', $objRequestor->getIntPageSize());
@@ -50,9 +48,7 @@ final class Package
      */
     public function contentType(PackageRequestor $objRequestor) : \GuzzleHttp\Psr7\Response
     {
-        if (empty($objRequestor->getStrPackageId())) {
-            throw new \LogicException('PackageRequestor::strCollectionCode is required');
-        }
+        $this->requireStrPackageId($objRequestor);
         
         if (empty($objRequestor->getStrContentType())) {
             throw new \LogicException('PackageRequestor::getStrContentType is required');
@@ -75,9 +71,7 @@ final class Package
      */
     public function granules(PackageRequestor $objRequestor) : array
     {
-        if (empty($objRequestor->getStrPackageId())) {
-            throw new \LogicException('PackageRequestor::strCollectionCode is required');
-        }
+        $this->requireStrPackageId($objRequestor);
         
         $objUri = new Uri();
         $objUri = $objUri->withQueryValue($objUri, 'pageSize', $objRequestor->getIntPageSize());
@@ -97,9 +91,7 @@ final class Package
      */
     public function granuleSummary(PackageRequestor $objRequestor) : array
     {
-        if (empty($objRequestor->getStrPackageId())) {
-            throw new \LogicException('PackageRequestor::strCollectionCode is required');
-        }
+        $this->requireStrPackageId($objRequestor);
         
         if (empty($objRequestor->getStrGranuleId())) {
             throw new \LogicException('PackageRequestor::strGranuleId is required');
@@ -113,5 +105,12 @@ final class Package
         $strPath.= $objRequestor->getStrGranuleId() . '/summary';
         
         return $this->objApi->getArray($objUri->withPath($strPath));
+    }
+
+    private function requireStrPackageId(PackageRequestor $objRequestor) : void
+    {
+        if (empty($objRequestor->getStrPackageId())) {
+            throw new \LogicException('PackageRequestor::getStrPackageId is required');
+        }
     }
 }
