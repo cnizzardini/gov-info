@@ -2,7 +2,7 @@
 
 namespace GovInfo;
 
-use \Exception;
+use Exception;
 
 class RunTimeException extends Exception
 {

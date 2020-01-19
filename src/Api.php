@@ -2,9 +2,10 @@
 
 namespace GovInfo;
 
-use \GuzzleHttp\Psr7\Uri;
-use \GuzzleHttp\Client;
-use \LogicException;
+use GuzzleHttp\Psr7\Uri;
+use GuzzleHttp\Client;
+use LogicException;
+use Psr\Http\Message\ResponseInterface;
 
 final class Api
 {
@@ -28,9 +29,9 @@ final class Api
      * HTTP GET
      * 
      * @param Uri $objUri
-     * @return \GuzzleHttp\Psr7\Response
+     * @return Response
      */
-    public function get(Uri $objUri) : \GuzzleHttp\Psr7\Response
+    public function get(Uri $objUri) : ResponseInterface
     {
         if (empty($objUri->getPath())) {
             throw new LogicException('Uri must contain a valid path');

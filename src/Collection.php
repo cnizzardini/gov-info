@@ -3,8 +3,8 @@
 namespace GovInfo;
 
 use GuzzleHttp\Psr7\Uri;
-use GovInfo\Requestor\CollectionRequestor;
-use \LogicException;
+use GovInfo\Requestor\CollectionAbstractRequestor;
+use LogicException;
 
 final class Collection
 {
@@ -34,12 +34,12 @@ final class Collection
     /**
      * Returns a type of collection
      *
-     * @param CollectionRequestor $objRequestor
+     * @param CollectionAbstractRequestor $objRequestor
      * @return array
      * @throws LogicException
      * @throws RunTimeException
      */
-    public function item(CollectionRequestor $objRequestor) : array
+    public function item(CollectionAbstractRequestor $objRequestor) : array
     {
         if (empty($objRequestor->getStrCollectionCode())) {
             throw new LogicException('CollectionRequestor::strCollectionCode is required');
@@ -74,10 +74,10 @@ final class Collection
      * Filters packages
      *
      * @param array $arrResult
-     * @param CollectionRequestor $objRequestor
+     * @param CollectionAbstractRequestor $objRequestor
      * @return array
      */
-    private function filterPackages(array $arrResult, CollectionRequestor $objRequestor) : array
+    private function filterPackages(array $arrResult, CollectionAbstractRequestor $objRequestor) : array
     {
         $strDocClass = $objRequestor->getStrDocClass();
         $strTitle = $objRequestor->getStrTitle();

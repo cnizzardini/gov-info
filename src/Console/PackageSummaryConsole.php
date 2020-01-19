@@ -3,12 +3,12 @@
 namespace GovInfo\Console;
 
 use \DOMDocument;
-use GovInfo\Requestor\Requestor;
+use GovInfo\Requestor\AbstractRequestor;
 use GovInfo\RunTimeException;
 use GuzzleHttp\Client;
 use GovInfo\Api;
 use GovInfo\Package;
-use GovInfo\Requestor\PackageRequestor;
+use GovInfo\Requestor\PackageAbstractRequestor;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\Input;
 use Symfony\Component\Console\Input\InputInterface;
@@ -68,7 +68,7 @@ class PackageSummaryConsole extends Command
             $this->getApiKey($input)
         );
         $package = new Package($this->api);
-        $requestor = new PackageRequestor();
+        $requestor = new PackageAbstractRequestor();
 
         $symfonyStyle = new SymfonyStyle($input, $output);
         $this->packageId = $symfonyStyle->ask('Enter a PackageId', 'BILLS-116hr5629ih');
@@ -94,7 +94,7 @@ class PackageSummaryConsole extends Command
         return 0;
     }
 
-    private function downloadResultsToFile(Requestor $requestor, Package $package, InputInterface $input) : string
+    private function downloadResultsToFile(AbstractRequestor $requestor, Package $package, InputInterface $input) : string
     {
         $response = $package->contentType($requestor);
 

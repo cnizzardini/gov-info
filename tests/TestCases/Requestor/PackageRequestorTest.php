@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use GovInfo\Requestor\PackageRequestor;
+use GovInfo\Requestor\PackageAbstractRequestor;
 
 class PackageRequestorTest extends TestCase
 {
@@ -10,7 +10,7 @@ class PackageRequestorTest extends TestCase
     
     public function testObject()
     {
-        $objRequestor = new PackageRequestor();
+        $objRequestor = new PackageAbstractRequestor();
         $objRequestor
             ->setStrContentType(self::CONTENT_TYPE)
             ->setStrGranuleId(self::GRANULE_ID)

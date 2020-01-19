@@ -2,7 +2,7 @@
 
 namespace GovInfo\Requestor;
 
-final class CollectionRequestor extends Requestor
+final class CollectionAbstractRequestor extends AbstractRequestor
 {
     private $strCollectionCode = '';
     private $objStartDate = '';

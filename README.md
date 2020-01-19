@@ -69,14 +69,14 @@ Retrieve all packages in a collection
 ```php
 use GovInfo\Api;
 use GovInfo\Collection;
-use GovInfo\Requestor\CollectionRequestor;
+use GovInfo\Requestor\CollectionAbstractRequestor;
 
 $api = new Api(
     new \GuzzleHttp\Client(), 
     'DEMO_KEY'
 );
 $collection = new Collection($api);
-$requestor = new CollectionRequestor();
+$requestor = new CollectionAbstractRequestor();
 
 $requestor
     ->setStrCollectionCode('BILLS')
@@ -113,14 +113,14 @@ Retrieve a specific package in a collection.
 ```php
 use GovInfo\Api;
 use GovInfo\Collection;
-use GovInfo\Requestor\CollectionRequestor;
+use GovInfo\Requestor\CollectionAbstractRequestor;
 
 $api = new Api(
     new \GuzzleHttp\Client(), 
     'DEMO_KEY'
 );
 $collection = new Collection($api);
-$requestor = new CollectionRequestor();
+$requestor = new CollectionAbstractRequestor();
 
 $requestor
     ->setStrCollectionCode('BILLS')
@@ -160,10 +160,10 @@ Retrieve a summary of a package.
 
 ```php
 use GovInfo\Package;
-use GovInfo\Requestor\PackageRequestor;
+use GovInfo\Requestor\PackageAbstractRequestor;
 
 $package = new Package($api);
-$requestor = new PackageRequestor();
+$requestor = new PackageAbstractRequestor();
 
 $result = $package->summary($requestor->setStrPackageId('BILLS-115hr4033rfs'));
 ```
@@ -190,10 +190,10 @@ Retrieve a package as a specified content-type
 
 ```php
 use GovInfo\Package;
-use GovInfo\Requestor\PackageRequestor;
+use GovInfo\Requestor\PackageAbstractRequestor;
 
 $package = new Package($api);
-$requestor = new PackageRequestor();
+$requestor = new PackageAbstractRequestor();
 $requestor
     ->setStrPackageId('BILLS-115hr4033rfs')
     ->setStrContentType('xml');

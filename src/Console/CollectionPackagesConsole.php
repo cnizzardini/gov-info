@@ -2,12 +2,12 @@
 
 namespace GovInfo\Console;
 
-use GovInfo\Requestor\Requestor;
+use GovInfo\Requestor\AbstractRequestor;
 use GovInfo\RunTimeException;
 use GuzzleHttp\Client;
 use GovInfo\Api;
 use GovInfo\Collection;
-use GovInfo\Requestor\CollectionRequestor;
+use GovInfo\Requestor\CollectionAbstractRequestor;
 use \DateTime;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -72,7 +72,7 @@ class CollectionPackagesConsole extends Command
         $this->collectionCode = $this->askUserForCollectionCode($collection, $symfonyStyle);
         $dateTime = $this->askUserForStartDate(new DateTime('first day of last month'), $symfonyStyle);
 
-        $requestor = new CollectionRequestor();
+        $requestor = new CollectionAbstractRequestor();
         $requestor
             ->setStrCollectionCode($this->collectionCode)
             ->setObjStartDate($dateTime);
@@ -94,13 +94,13 @@ class CollectionPackagesConsole extends Command
         return 0;
     }
 
-    private function displayResultsInTable(Collection $collection, Requestor $requestor, SymfonyStyle $symfonyStyle)
+    private function displayResultsInTable(Collection $collection, AbstractRequestor $requestor, SymfonyStyle $symfonyStyle)
     {
         $results = $this->formatResults($collection, $requestor);
         $symfonyStyle->table($results['header'], $results['rows']);
     }
 
-    private function downloadResultsToCsv(Collection $collection, Requestor $requestor, InputInterface $input) : string
+    private function downloadResultsToCsv(Collection $collection, AbstractRequestor $requestor, InputInterface $input) : string
     {
         $downloadPath = getenv('HOME') . DIRECTORY_SEPARATOR . 'Downloads';
 
@@ -129,7 +129,7 @@ class CollectionPackagesConsole extends Command
         return $file;
     }
 
-    private function formatResults(Collection $collection, Requestor $requestor) : array
+    private function formatResults(Collection $collection, AbstractRequestor $requestor) : array
     {
         $result = $collection->item($requestor);
 

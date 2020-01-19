@@ -6,7 +6,7 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 use GovInfo\Api;
 use GovInfo\Package;
-use GovInfo\Requestor\PackageRequestor;
+use GovInfo\Requestor\PackageAbstractRequestor;
 
 class PackageTest extends TestCase
 {
@@ -22,7 +22,7 @@ class PackageTest extends TestCase
         ]);
         
         $objApi = new Api($objClient, self::KEY);
-        $objRequestor = new PackageRequestor();
+        $objRequestor = new PackageAbstractRequestor();
         $objRequestor->setStrPackageId('BILLS-115hr4033rfs');
         
         $objPackage = new Package($objApi);
@@ -40,7 +40,7 @@ class PackageTest extends TestCase
         ]);
         
         $objApi = new Api($objClient, self::KEY);
-        $objRequestor = new PackageRequestor();
+        $objRequestor = new PackageAbstractRequestor();
         $objRequestor->setStrPackageId('BILLS-115hr4033rfs')->setStrContentType('xml');
         
         $objPackage = new Package($objApi);
@@ -62,7 +62,7 @@ class PackageTest extends TestCase
         ]);
         
         $objApi = new Api($objClient, self::KEY);
-        $objRequestor = new PackageRequestor();
+        $objRequestor = new PackageAbstractRequestor();
         $objRequestor->setStrPackageId('CREC-2018-01-04');
         
         $objPackage = new Package($objApi);
@@ -81,7 +81,7 @@ class PackageTest extends TestCase
         ]);
         
         $objApi = new Api($objClient, self::KEY);
-        $objRequestor = new PackageRequestor();
+        $objRequestor = new PackageAbstractRequestor();
         $objRequestor->setStrPackageId('CREC-2018-01-04');
         $objRequestor->setStrGranuleId('CREC-2018-01-04-pt1-PgD7-3');
         

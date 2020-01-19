@@ -2,7 +2,7 @@
 
 namespace GovInfo\Requestor;
 
-final class PackageRequestor extends Requestor
+final class PackageAbstractRequestor extends AbstractRequestor
 {
     private $strPackageId = '';
     private $strGranuleId = '';

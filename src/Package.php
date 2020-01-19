@@ -3,7 +3,9 @@
 namespace GovInfo;
 
 use GuzzleHttp\Psr7\Uri;
-use GovInfo\Requestor\PackageRequestor;
+use GuzzleHttp\Psr7\Response;
+use GovInfo\Requestor\PackageAbstractRequestor;
+use LogicException;
 
 final class Package
 {
@@ -22,11 +24,10 @@ final class Package
     /**
      * Gets package summary
      * 
-     * @param PackageRequestor $objRequestor
+     * @param PackageAbstractRequestor $objRequestor
      * @return array
-     * @throws \LogicException
      */
-    public function summary(PackageRequestor $objRequestor) : array
+    public function summary(PackageAbstractRequestor $objRequestor) : array
     {
         $this->requireStrPackageId($objRequestor);
         
@@ -42,11 +43,11 @@ final class Package
     /**
      * Gets a package of a specified content type
      * 
-     * @param PackageRequestor $objRequestor
-     * @return \GuzzleHttp\Psr7\Response
-     * @throws \LogicException
+     * @param PackageAbstractRequestor $objRequestor
+     * @return Response
+     * @throws LogicException
      */
-    public function contentType(PackageRequestor $objRequestor) : \GuzzleHttp\Psr7\Response
+    public function contentType(PackageAbstractRequestor $objRequestor) : Response
     {
         $this->requireStrPackageId($objRequestor);
         
@@ -65,11 +66,11 @@ final class Package
     /**
      * Gets a packages granules
      * 
-     * @param PackageRequestor $objRequestor
-     * @return \stdClass
-     * @throws \LogicException
+     * @param PackageAbstractRequestor $objRequestor
+     * @return array
+     * @throws LogicException
      */
-    public function granules(PackageRequestor $objRequestor) : array
+    public function granules(PackageAbstractRequestor $objRequestor) : array
     {
         $this->requireStrPackageId($objRequestor);
         
@@ -85,11 +86,11 @@ final class Package
     /**
      * Get granule summary
      * 
-     * @param \GovInfo\Requestor\PackageRequestor $objRequestor
+     * @param PackageAbstractRequestor $objRequestor
      * @return array
-     * @throws \LogicException
+     * @throws LogicException
      */
-    public function granuleSummary(PackageRequestor $objRequestor) : array
+    public function granuleSummary(PackageAbstractRequestor $objRequestor) : array
     {
         $this->requireStrPackageId($objRequestor);
         
@@ -107,7 +108,7 @@ final class Package
         return $this->objApi->getArray($objUri->withPath($strPath));
     }
 
-    private function requireStrPackageId(PackageRequestor $objRequestor) : void
+    private function requireStrPackageId(PackageAbstractRequestor $objRequestor) : void
     {
         if (empty($objRequestor->getStrPackageId())) {
             throw new \LogicException('PackageRequestor::getStrPackageId is required');

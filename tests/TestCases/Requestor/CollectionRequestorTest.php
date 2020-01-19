@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use GovInfo\Requestor\CollectionRequestor;
+use GovInfo\Requestor\CollectionAbstractRequestor;
 
 class CollectionRequestorTest extends TestCase
 {
@@ -14,7 +14,7 @@ class CollectionRequestorTest extends TestCase
         $objStartDate = new \DateTime('2018-01-01');
         $objEndDate = new \DateTime('2019-01-01');
         
-        $objRequestor = new CollectionRequestor();
+        $objRequestor = new CollectionAbstractRequestor();
         $objRequestor
             ->setStrCollectionCode(self::COLLECTION_CODE)
             ->setObjStartDate($objStartDate)
